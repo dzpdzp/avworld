@@ -7,10 +7,13 @@ class Welcome extends CI_Controller {
     }
 	public function index()
 	{   
-        $this->load->library('user_agent');
-                $this->lang->load('web', 'zh');
-		$this->load->view('common/user_head');
-		$this->load->view('page/index');
-		$this->load->view('common/user_foot');
+            $this->load->model('img_model');
+            
+            
+            $this->load->library('user_agent');
+            $this->lang->load('web', 'zh');
+            $this->load->view('common/user_head');
+            $this->load->view('page/index');
+            $this->load->view('common/user_foot');
 	}
 }

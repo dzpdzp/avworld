@@ -12,7 +12,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="alternate" type="application/vnd.wap.xhtml+xml" media="handheld" href="target" />
-    <link rel="shortcut icon" href="<?php echo BASE_URL?>/images/favicon.ico" />
+    <link rel="shortcut icon" href="<?php echo ADMIN_RESOURCE_PATH?>/images/icon.png"  type="image/png">
     <link href="<?php echo BASE_URL?>/Css/style.css" rel="stylesheet" />
     <style>
     #header {

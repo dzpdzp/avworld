@@ -60,7 +60,7 @@
         </ul>
     </div>
     <div class="txt  detail" aaa<?php echo $type;?>>
-        <?php if($type == 1 || empty($type)):?>
+        <?php if($type == 1 || !is_numeric($type)):?>
         <div class="list">
             <a  href="<?php echo BASE_URL?>zh/service/detail/?wsid=c31d3519-beaf-4b82-8814-5add92025394">
                 <div class="list-img">

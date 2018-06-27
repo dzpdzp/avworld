@@ -11,13 +11,13 @@
         </div>
     </div>
     <div class="zh-m-enable">
-        <p><?php echo $this->lang->line('company_info'); ?></p>
-        <p><?php echo $this->lang->line('company_info2'); ?></p>            
+        <p><?php echo $data['text1']?></p>
+        <p><?php echo $data['text2'] ?></p>            
     </div>
     <div class="index-txt-about detail">
         <div class="zhdisable" data-scroll-reveal="enter bottom" data-scroll-reveal-initialized="true">
-            <p><?php echo $this->lang->line('company_info'); ?></p>
-            <p><?php echo $this->lang->line('company_info2'); ?></p>            
+            <p><?php echo $data['text1']?></p>
+            <p><?php echo $data['text2']?></p>            
         </div>
         <br />
         <div data-scroll-reveal="enter top" data-scroll-reveal-initialized="true">
