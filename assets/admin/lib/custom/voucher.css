@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+/**
+ * アウトライン
+ */
+body {
+  font-family: "ヒラギノ角ゴ Pro W3",メイリオ,Osaka,Arial,Verdana,"ＭＳ Ｐゴシック",sans-serif;
+  color: #333333;
+  font-size: 12px;
+}
+#print { 
+  width: 700px;
+  margin: 0px auto;
+}
+#print h1 { 
+  border-bottom: 2px #000 solid;
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  line-height: 1.5em;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+table th {
+  color: #000000;
+  padding: 8px 15px;
+  background: #eeeeee;
+  line-height: 120%;
+  text-align: center;
+  border: 1px solid #cccccc;
+  white-space: nowrap;
+}
+table td {
+  padding: 8px 15px;
+  border: 1px solid #cccccc;
+}
+.td_blank {
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+}
+.td_right {
+  text-align: right;
+}
+
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+

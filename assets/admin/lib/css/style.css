@@ -1,0 +1,617 @@
+*{
+/*font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif;*/
+font-family: "MS PGothic","Hiragino Kaku Gothic Pro",Osaka,sans-serif;
+}
+
+.label-danger{
+font-weight: normal;
+}
+.table > tbody > tr > td.btn-middle{
+	vertical-align: middle !important;
+}
+.radio label, .checkbox label {
+    padding-left: 0px;
+}
+
+.btn:hover{
+	-webkit-box-shadow:3px 5px 6px -6px #000;
+	-moz-box-shadow:3px 5px 6px -6px #000;
+	box-shadow:3px 5px 6px -6px #000;
+}
+.navbar-static-top{
+    background-image:url("../../images/bg_metal.jpg");
+    background-repeat: repeat  !important;
+    color:#fff !important;
+}
+
+.navbar-top-links > li  {
+    color:#656565 !important;
+}
+
+
+.navbar-top-links > li > a {
+    color:#fff !important;
+}
+
+/*
+ * loading css
+ * lyq 2015/11/18
+ */
+ 
+.spinner {
+  margin: 100px auto 0;
+  width: 150px;
+  text-align: center;
+}
+ 
+.spinner > div {
+  width: 30px;
+  height: 30px;
+  background-color: #67CF22;
+ 
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+ 
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+ 
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+ 
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+ 
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+
+/*
+ * word-warp
+ * lyq 2015/11/18
+ */
+.modal-body {
+    word-wrap: break-word;
+}
+/* 1208 */
+.flt-left{ display:inline-block; float:right; margin: 0 0 -11px 0;}
+.table td span input.filename{ border-radius:4px; border:1px solid #ccc; padding: 5px 2px; background:#eee; color:#666;}
+@media (max-width: 1024px) {
+    .flt-left{ display:inline-block; float:left; margin: 0 0 -11px 0;}
+    .filename{ margin:4px 0;}
+}
+.badge_zai {
+    background-color: #979797 !important;
+    font-weight: 100;
+}
+/* 1218 
+.tab-content table.table-hover tbody tr:nth-last-of-type(1) div ul.dropdown-menu,
+.tab-content table.table-hover tbody tr:nth-last-of-type(2) div ul.dropdown-menu
+{
+    top: auto;
+    bottom: 100%;
+    margin-bottom: 2px;
+}
+*/
+.one_row_dropdown ul.dropdown-menu
+{
+    right: 95px;
+    top: -120px;
+    bottom: -10px;
+}
+/* 1220 */
+.tips{  
+    display:inline-block;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius:3px;
+}
+
+
+/*
+ * word-warp(all)
+ * lyq 2016/01/28
+ */
+.table-responsive > .table > tbody > tr > td{
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+@media screen and (max-width: 767px){
+    .table-responsive > .table > tbody > tr > td{
+        word-wrap: break-word;
+        word-break: break-all;
+        white-space: normal;
+    }
+}
+
+
+/*---------------------------------------------
+EntryFrom Header
+----------------------------------------------*/
+
+.card-header-blue{
+	border-left: 10px solid #FF9933;
+    background-image:url("../../images/bg_metal.jpg");
+    background-color:#f0f0f0;
+    color:#fff;
+    border-bottom:1px solid #BBB;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 3px 6px 0 rgba(0, 0, 0, 0.19);
+    padding:0px;
+    padding-left:20px;
+    margin-top:0px;
+    margin-left:-2px;
+    margin-bottom:15px;
+    overflow:hidden;
+    -webkit-transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.input-group{ border-radius: 0!important;}
+.form-control { border-radius: 0!important;}
+
+.panel-default{	
+        border-radius: 0!important;		
+}
+
+
+.pull-right{
+padding:0 !important;
+margin:0 !important;
+}
+
+
+/*---------------------------------------------
+Button
+----------------------------------------------*/
+.btn-warning{
+border-radius: 0!important;
+min-width:50px!important;  
+background: #fefefe!important; 
+border:2px solid #FF9933 !important;
+color:#000!important;  
+margin-right:3px;
+}
+
+.btn-success{
+ border-radius: 0!important;
+margin-right:5px!important; 
+background: #FF9933!important; 
+border:1px solid #000 !important;
+color:#000!important;   
+}
+
+.btn-info{
+ border-radius: 0!important;
+ border:1px solid blue !important;
+min-width:50px!important;  
+background: #fefefe!important; 
+color:blue!important;   
+}
+
+
+.btn-default{
+ border-radius: 0!important;
+ border:1px solid #333 !important;
+min-width:60px!important;  
+background: #fefefe!important; 
+color:#000!important;   
+}
+
+
+.btn-danger{
+ border-radius: 0!important;
+min-width:50px!important;  
+}
+
+
+/*---------------------------------------------
+Tab Header
+----------------------------------------------*/
+
+.nav-tabs > li > a {
+    background: #eee;
+    margin-bottom:0px;
+    border-radius: 0;
+	border-bottom:0 !important;    
+	font-size:14px;
+    color:#444!important;
+}
+
+.nav-tabs > li  {
+	text-align:center;
+	margin-bottom:0px;
+	font-size:14px;
+    color:#fff!important;
+    margin:0!important;
+	border-bottom:1px solid #000 !important;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:visited {
+	border:1px solid #000 !important;
+	border-bottom:1px solid #000 !important;
+    /*background: #FF9933 !important;*/
+    background-image:url("../../images/bg_metal.jpg");
+	font-size:14px;
+    color:#fff!important;
+	margin-bottom:-1px!important;	
+}
+
+
+/*---------------------------------------------
+Tab Content
+----------------------------------------------*/
+.tab-pane  {
+	border-top: 1px solid #aaa!important;
+    border-radius: 0;
+    margin-top:-6px;
+    padding-top:5px;
+}
+
+.no_top_border {
+	border-top: 0!important;
+}
+/*---------------------------------------------
+panel-heading
+----------------------------------------------*/
+/** order 发送信message 边框蓝色**/
+.blue-border >.panel-default >.panel-heading {border-top:2px blue solid !important;}
+.panel-default >.panel-heading{
+	    border: 1px solid #f3f3f3!important;
+	    border-left: 4px solid #FF9933!important;
+	   -webkit-border-radius: 0 !important;
+		 -moz-border-radius: 0 !important;
+			  border-radius: 0 !important;
+		display: block; 
+		background-color: #fafafa;
+		padding-left: 10px;
+        padding:10px!important;	
+		color: #000!important;	
+		width: 100%; 
+		height: 100%; 
+		font-size: 14px!important;	
+		text-decoration: none!important;		
+        border-radius: 0!important;	
+        margin-top:-2px;	
+        margin-left:-1px;	
+        margin-right:-1px;	
+    border-bottom:1px solid #BBB;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+    -webkit-transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom:-1px;
+    vertical-align:middle!important;	
+}
+
+.panel-default >.panel-heading > a{
+    vertical-align:middle!important;
+    text-decoration: none!important;		
+}
+
+
+
+/*---------------------------------------------
+Main Page Navi
+----------------------------------------------*/
+
+.breadcrumb {
+	margin-top:15px;
+	margin-bottom:15px;	
+	padding:1px 0;
+	border: 1px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom:8px;
+	background-color:#fff;
+
+	  -webkit-border-radius: 0 !important;
+		 -moz-border-radius: 0 !important;
+			  border-radius: 0 !important;		  
+			  
+}
+
+.breadcrumb > li {
+	text-shadow: 0 0px 0 #FFF;
+	padding: 0 25px;
+	position: relative;
+	white-space: nowrap;	
+	color:#666 !important; 	
+	font-size:15px !important;		
+}
+
+.breadcrumb > li > a {
+	color:#666 !important; 	
+	font-size:15px !important;		
+}
+
+
+.breadcrumb > li + li:before {
+	content: '';
+	padding: 0;
+}
+
+
+.breadcrumb > li:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 3px;
+	right: 0px;
+	width: 15px;
+	height: 15px;
+			
+	border-right: 1px  #666 solid;
+	border-bottom: 1px  #666 solid;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+
+#breadcrumb-li-lastone:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: -1px;
+	right: -5px;
+	width: 26px;
+	height: 26px;
+			
+}
+
+
+/*---------------------------------------------
+Menu
+----------------------------------------------*/
+.side-menu >li >a{
+	background-color:#f00!important;
+	color:red;		
+}
+
+
+/*---------------------------------------------
+----------------------------------------------*/
+.well-warning {
+  background-color: #F4FFFF !important;
+  color: #000 !important;
+  border:1px solid #006 !important;
+}
+
+.alert-danger {
+  background-color: #FFF3E1 !important;
+  color: #000 !important;
+  border:1px solid #f00 !important;
+}
+
+
+/*---------------------------------------------
+Tableheader
+----------------------------------------------*/
+.table thead th {
+  background-color: #656565 !important;
+  vertical-align:middle;
+  color:#fff;	  
+
+}
+
+.table thead tr th {
+  background-color: #656565 !important;
+  vertical-align:middle;  
+  color:#fff;	
+}
+
+.table  th {
+  background-color: #656565 !important;
+  vertical-align:middle; 
+  color:#fff;	
+}
+
+.table tr th {
+  background-color: #656565 !important;
+  border-top:1px solid #000  !important;
+  border-bottom:1px solid #ccc  !important;
+  vertical-align:middle;  
+  color:#fff;	
+}
+
+
+/*---------------------------------------------
+fare setting table width
+2016/02/16
+----------------------------------------------*/
+.kingaku, .suryou, .juuryou {
+    width: 100%;
+    margin-bottom: 0;
+}
+@media screen and (max-width: 991px){
+    .fare_table_div {
+        width: 1400px;
+    }
+}
+@media screen and (min-width: 992px){
+    .fare_table_div {
+        width: 1600px;
+    }
+}
+@media screen and (min-width: 1200px){
+    .fare_table_div {
+        width: 1800px;
+    }
+}
+/*---------------------------------------------
+scroll
+2016/03/31
+----------------------------------------------*/
+.scroll-box{
+	overflow: auto;
+	-webkit-transform: translateZ(0px);
+}
+.scroll-box::-webkit-scrollbar{
+	width: 5px;
+	background: #9aadfc;
+}
+.scroll-box::-webkit-scrollbar:horizontal{
+	height: 14px;
+	background: #a3d2a0;
+}
+.scroll-box::-webkit-scrollbar-thumb{
+	background: #435295;
+	border-radius: 2px;
+}
+.scroll-box::-webkit-scrollbar-thumb:horizontal{
+	background: #479443;
+	border-radius: 2px;
+}
+/*操作ガイドli行颜色*/
+.help-li{
+}
+/*お問い合わせli行颜色*/
+.ask-li{
+}
+/* TOP页消息分隔线 */
+hr.top_message {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+/* mitumori 再次css */
+.mitumori-again{
+    background-color: #CCFFFF;
+}
+/* mitumori 再次 字體単価  css */
+.mitumori-again-calprice-font{
+    color:red;
+}
+.mitumori-again-operationdays-font{
+    color:red;
+}
+.mitumori-again-ssurfacemailflag-font{
+    color:red;
+}
+/*入力FORM　提示用文字*/
+.tip_for_input{
+    font-size:12px!important;
+    font-weight: normal;
+    color:blue;
+}
+/*supplier 端 代金引换红色点*/
+.cash-on-delivery{
+    background-color:red;
+}
+
+/*代金引换红色大字*/
+.daibiki-text{
+	font-size:17px!important;
+	color:red!important;
+	background-color:blue;
+	padding:5px 20px;
+}
+/* 那期缩短期望*/
+.cash-on-hopenaqi{
+    background-color:red;
+}
+.hope-text{
+        font-weight: bold;
+	font-size:17px!important;
+	color:black!important;
+	background-color:green;
+	padding:5px 20px;
+}
+.navbar-header{
+height:69px!important;
+}
+
+.navbar-toggle{
+margin-top:22px;
+}
+/*代引き金額からのポイント引き算注意*/
+.delivery_message{
+ font-size:18px!important;
+ color:#00f!important;
+}
+.target_buyer{
+    display:inline;
+    border:1px blue solid;
+    margin: 5px;
+}
+
+/*微調整*/
+.panel-heading > span.pull-left{
+padding-top:5px;
+}
+.order_type2{
+    border-radius: 0!important;
+    margin-right:5px!important; 
+    background: #92d050!important; 
+    border:1px solid #000 !important;
+    color:#000!important;   
+    
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+.order_type31{
+    border-radius: 0!important;
+    margin-right:5px!important; 
+    background: #8eb4e3!important; 
+    border:1px solid #000 !important;
+    color:#000!important;   
+    
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+.order_type32{
+    border-radius: 0!important;
+    margin-right:5px!important; 
+    background: #d99694!important; 
+    border:1px solid #000 !important;
+    color:#000!important;   
+    
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+.check_ico{ width:auto; display:inline-block;}
+.check_ico i{ margin: 0 4px 0 0; font-size:20px;}
+.check_ico_on{ display:none;}
+/* by ycs 1107 */
+/* by ycs 1115 */
+/*.modal-footer #send_confirm_msg{ float:left;}*/
+/* by ycs 1115 */
