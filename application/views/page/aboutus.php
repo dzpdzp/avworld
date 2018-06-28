@@ -53,99 +53,22 @@
             width:10%;
         }
     </style>
-    <div class="txt detail zhengshu">
-        <div class="carousel slide media-carousel" data-ride="carousel" data-interval="6000" id="media100">
+    <div class="txt detail ">
+        <div class="carousel slide media-carousel" data-ride="carousel" data-interval="3000" id="media100">
             <div class="carousel-inner" style="font-size: 1.2em;">
-                <div class='item active col-sm-12'>
+                <?php foreach ($certificate_list as $key => $value) :?>
+                <div class='item <?php   if($key == 0){echo 'active';};?> col-sm-12'>
+                    <?php foreach ($value as $k => $v) :?>
                     <div class='col-sm-3' style="text-align: center;">
-                        <div class='col-sm-12' style="text-align: center; background-color: #31859c; padding: 10px 0;">
-                            <span style="color: white; font-size: 1.1em;white-space: nowrap; text-overflow: ellipsis;">銅タングステン在庫販売</span>
-                            <br/>
-                            <div style="text-align: center;height:28px;">
-                                <a target="new" href="http://www.e-metals.net/user/specs/detail/000942" style="color: yellow;font-size: 1.1em;text-decoration: underline;">丸棒</a>
-                                <a target="new" href="http://www.e-metals.net/user/specs/detail/000943" style="color: yellow;font-size: 1.1em;text-decoration: underline;">板材</a>
-                                <a target="new" href="http://www.e-metals.net/user/specs/detail/001934" style="color: yellow;font-size: 1.1em;text-decoration: underline;">角棒</a>
-                            </div>
-                        </div>
+                        <img src="<?php echo BASE_URL.$v['imgpath']?>">
+                        <span style="color: white; font-size: 1.1em;white-space: nowrap; text-overflow: ellipsis;"><?php echo $v['title']?></span>
+                        
                     </div>
-                    <div class='col-sm-3' style="text-align: center;">
-                        <div class='col-sm-12' style="text-align: center; background-color: #31859c; padding: 10px 0;">
-                            <span style="color: white; font-size: 1.1em;white-space: nowrap; text-overflow: ellipsis;">タングステン在庫販売</span>
-                            <br/>
-                            <div style="text-align: center;height:28px;">
-                                <a target="new" href="http://www.e-metals.net/user/specs/detail/000947" style="color: yellow;font-size: 1.1em;text-decoration: underline;">丸棒</a>
-                                <a target="new" href="http://www.e-metals.net/user/specs/detail/000948" style="color: yellow;font-size: 1.1em;text-decoration: underline;">板材</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='col-sm-3' style="text-align: center;">
-                        <div class='col-sm-12' style="text-align: center; background-color: #31859c; padding: 10px 0;">
-                            <span style="color: white; font-size: 1.1em;white-space: nowrap; text-overflow: ellipsis;">モリブデン在庫販売</span>
-                            <br/>
-                            <div style="text-align: center;height:28px;">
-                                <a target="new" href="http://www.e-metals.net/user/specs/detail/000949" style="color: yellow;font-size: 1.1em;text-decoration: underline;">丸棒</a>
-                                <a target="new" href="http://www.e-metals.net/user/specs/detail/000950" style="color: yellow;font-size: 1.1em;text-decoration: underline;">板材</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='col-sm-3' style="text-align: center;">
-                        <div class='col-sm-12' style="text-align: center; background-color: #31859c; padding: 10px 0;">
-                            <span style="color: white; font-size: 1.1em;white-space: nowrap; text-overflow: ellipsis;">タンタル在庫販売</span>
-                            <br/>
-                            <div style="text-align: center;height:28px;">
-                                <a target="new" href="http://www.e-metals.net/user/specs/detail/001517" style="color: yellow;font-size: 1.1em;text-decoration: underline;">丸棒</a>
-                                <a target="new" href="http://www.e-metals.net/user/specs/detail/001518" style="color: yellow;font-size: 1.1em;text-decoration: underline;">板材</a>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endforeach;?>
                 </div>
-                <div class='item col-sm-12'>
-                    <div class='col-sm-3' style="text-align: center;">
-                        <div class='col-sm-12' style="text-align: center; background-color: #77933c; padding: 10px 0;">
-                            <span style="color: white; font-size: 1.1em;white-space: nowrap; text-overflow: ellipsis;">アルミ - 4面フライス加工</span>
-                            <br/>
-                            <div style="text-align: center;height:28px;">
-                                <a target="new" href="http://www.e-metals.net/user/cut/detail/201265" style="color: yellow;font-size: 1em;text-decoration: underline;">A2017P</a>
-                                <a target="new" href="http://www.e-metals.net/user/cut/detail/201264" style="color: yellow;font-size: 1em;text-decoration: underline;">A5052P</a>
-                                <a target="new" href="http://www.e-metals.net/user/cut/detail/201267" style="color: yellow;font-size: 1em;text-decoration: underline;">A6061P</a>
-                                <a target="new" href="http://www.e-metals.net/user/cut/detail/201266" style="color: yellow;font-size: 1em;text-decoration: underline;">A7075P</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='col-sm-3' style="text-align: center;">
-                        <div class='col-sm-12' style="text-align: center; background-color: #77933c; padding: 10px 0;">
-                            <span style="color: white; font-size: 1.1em;white-space: nowrap; text-overflow: ellipsis;">アルミ – 6面フライス加工</span>
-                            <br/>
-                            <div style="text-align: center;height:28px;">
-                                <a target="new" href="http://www.e-metals.net/user/cut/detail/201269" style="color: yellow;font-size: 1em;text-decoration: underline;">A2017P</a>
-                                <a target="new" href="http://www.e-metals.net/user/cut/detail/201268" style="color: yellow;font-size: 1em;text-decoration: underline;">A5052P</a>
-                                <a target="new" href="http://www.e-metals.net/user/cut/detail/201271" style="color: yellow;font-size: 1em;text-decoration: underline;">A6061P</a>
-                                <a target="new" href="http://www.e-metals.net/user/cut/detail/201270" style="color: yellow;font-size: 1em;text-decoration: underline;">A7075P</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='col-sm-3' style="text-align: center;">
-                        <div class='col-sm-12' style="text-align: center; background-color: #77933c; padding: 10px 0;">
-                            <span style="color: white; font-size: 1.1em;white-space: nowrap; text-overflow: ellipsis;">特殊鋼– 6面フライス加工</span>
-                            <br/>
-                            <div style="text-align: center;height:28px;">
-                                <a target="new" href="http://www.e-metals.net/user/cut/detail/200975" style="color: yellow;font-size: 1.1em;text-decoration: underline;">S50C</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='col-sm-3' style="text-align: center;">
-                        <div class='col-sm-12' style="text-align: center; background-color: #77933c ; padding: 10px 0;">
-                            <span style="color: white; font-size: 1.1em;white-space: nowrap; text-overflow: ellipsis;">一般鋼– 6面フライス加工</span>
-                            <br/>
-                            <div style="text-align: center;height:28px;">
-                                <a target="new" href="http://www.e-metals.net/user/cut/detail/200974" style="color: yellow;font-size: 1.1em;text-decoration: underline;">SS400</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a data-slide="prev" href="#media100" class="left carousel-control" style="margin-top:35px;">‹</a>
-            <a data-slide="next" href="#media100" class="right carousel-control" style="margin-top:35px;">›</a>
+                <?php endforeach;?>
+            <a data-slide="prev" href="#media100" class="left carousel-control" >‹</a>
+            <a data-slide="next" href="#media100" class="right carousel-control" >›</a>
         </div>
 <!--        <div>
             <img src="<?php echo BASE_URL?>resource/zhengshu/1.png">

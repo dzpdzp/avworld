@@ -18,7 +18,16 @@ class Aboutus extends CI_Controller {
         $data = array(
             'data' => $rs
         );
-        
+        $this->load->model('Img_model','img');
+        // 根据条件分页查询形状信息
+        $certificate_list = $this->img->search_certificate();
+        $rs_certificate_list = array();
+        // 改造数据
+        foreach ($certificate_list as $key => $value) {
+            $rs_certificate_list[intval($key/4)][] = $value;
+        }
+        // 需要传递给视图的参数
+        $data['certificate_list'] = $rs_certificate_list;
         
         $this->load->view('common/user_head');
         $this->load->view('page/aboutus',$data);

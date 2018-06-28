@@ -25,7 +25,7 @@
                         <div class="form-group">
                             <label class="control-label col-lg-2 col-md-4 col-sm-5">证书名称</label>
                             <div class="col-lg-10 col-md-8 col-sm-7">
-                                <input class="form-control" placeholder="证书名称" type="text">
+                                <input class="form-control" placeholder="证书名称" name="title" required="" type="text">
                             </div>
                         </div>
                         <div class="form-group">

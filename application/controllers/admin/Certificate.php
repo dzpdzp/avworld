@@ -34,12 +34,15 @@ class Certificate extends MY_Controller {
             else
             {
                 $data['upload_data']  =  $this->upload->data();
-                echo "<pre>";
-                var_dump($data['upload_data']);exit;
+                $insert = array(
+                    'title'=> $this->postval('title'),
+                    'imgpath' => 'resource/zhengshu/'.$data['upload_data']['file_name']
+                );
+                 $this->db->insert('certificate', $insert);
             }
         }
         // 根据条件分页查询形状信息
-        $certificate_list = $this->img->search_certificate(10, intval($offset));
+        $certificate_list = $this->img->search_certificate();
         // 需要传递给视图的参数
         $data['certificate_list'] = $certificate_list;
         // 加载视图

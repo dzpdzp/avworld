@@ -37,9 +37,9 @@ class Img_model extends CI_Model {
         return $this->db->count_all_results('certificate');
     }
     // 证书设置 查询
-    public function search_certificate($per_page, $offset) {
+    public function search_certificate() {
         return $this->db->order_by('id ASC')               // 按形状编号升序排序
-                        ->get('certificate', $per_page, $offset)   // 执行查询
+                        ->get('certificate')   // 执行查询
                         ->result_array();                       // 结果集转化为结果数组
     }
 
