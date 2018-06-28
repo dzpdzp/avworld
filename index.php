@@ -304,6 +304,7 @@ switch (ENVIRONMENT)
 	}
 
 	define('VIEWPATH', $view_folder.DIRECTORY_SEPARATOR);
+	define('PROJPATH', str_replace('\\', '/', dirname(__FILE__).'/'));
 
 /*
  * --------------------------------------------------------------------
