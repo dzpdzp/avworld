@@ -42,5 +42,17 @@ class Img_model extends CI_Model {
                         ->get('certificate')   // 执行查询
                         ->result_array();                       // 结果集转化为结果数组
     }
+    // 证书设置 查询
+    public function search_news($where = array(),$limit='') {
+        if(!empty($where)){
+            $this->db->where($where);
+        }
+        if(!empty($limit)){
+            $this->db->limit($limit);
+        }
+        return $this->db->order_by('id desc')               // 按形状编号
+                        ->get('news')   // 执行查询
+                        ->result_array();                       // 结果集转化为结果数组
+    }
 
 }

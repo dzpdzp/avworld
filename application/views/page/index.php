@@ -283,66 +283,24 @@
         <div class="index-title-news"></div>
     </div>
     <div class="txt">
-        <div class="list c2 ">
+        <?php foreach($new_list as $newk => $newv):?>
+        <div class="list c2 <?php if($newk%2 !==0){echo 'mg-l-20'; }?>">
             <div class="listbox">
                 <div class="list-news-img">
-                    <img src="<?php echo BASE_URL?>resource/news/thumb/news1.jpg" />
+                    <img src="<?php echo BASE_URL.$newv['imgpath']?>" />
                 </div>
                 <div class="list-news-box">
-                    <a href="<?php echo BASE_URL?>zh/news/detail/?nid=c3685d4d-d1ca-4c7f-b80f-9097e011c010">
-                        <div class="date">2012/4/20</div>
+                    <a href="<?php echo BASE_URL?>zh/news/detail/?id=<?php echo $newv['id']?>">
+                        <!--<div class="date">2012/4/20</div>-->
+                        <div class="title"><?php echo $newv['title']?></div>
                         <div class="line"></div>
-                        <div class="desc">2012 BMW“奥运之悦”盛典 </div>
+                        <div class="desc"><?php echo $newv['description']?> </div>
                         <div class="sk"></div>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="list c2 mg-l-20">
-            <div class="listbox">
-                <div class="list-news-img">
-                    <img src="<?php echo BASE_URL?>resource/news/thumb/news2.png" />
-                </div>
-                <div class="list-news-box">
-                    <a href="<?php echo BASE_URL?>zh/news/detail/?nid=370ac023-e1cd-4f39-a483-70e5bbe258f4">
-                        <div class="date">2016/5/10</div>
-                        <div class="line"></div>
-                        <div class="desc">2016年 雪佛兰品牌之夜</div>
-                        <div class="sk"></div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="list c2 ">
-            <div class="listbox">
-                <div class="list-news-img">
-                    <img src="<?php echo BASE_URL?>resource/news/thumb/news3.png" />
-                </div>
-                <div class="list-news-box">
-                    <a href="<?php echo BASE_URL?>zh/news/detail/?nid=9262ea68-a7eb-4a46-b206-b768c2e210ff">
-                        <div class="date">2017/11/11</div>
-                        <div class="line"></div>
-                        <div class="desc">2017天猫双11全球狂欢节 </div>
-                        <div class="sk"></div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="list c2 mg-l-20">
-            <div class="listbox">
-                <div class="list-news-img">
-                    <img src="<?php echo BASE_URL?>resource/news/thumb/news4.png" />
-                </div>
-                <div class="list-news-box">
-                    <a href="<?php echo BASE_URL?>zh/news/detail/?nid=b5ba263a-67f5-48bc-aed8-ced3bc8a9324">
-                        <div class="date">2018/04/14</div>
-                        <div class="line"></div>
-                        <div class="desc">2018年BMW M5上市发布会</div>
-                        <div class="sk"></div>
-                    </a>
-                </div>
-            </div>
-        </div>
+       <?php endforeach;?>
 
     </div>
 </div>

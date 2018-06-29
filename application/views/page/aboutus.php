@@ -52,6 +52,11 @@
         .zhengshu img{
             width:10%;
         }
+        .carousel-control.left{
+            background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%); 
+            background-image:  -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, .0001)));
+            background-image: linear-gradient(to right, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
+        }
     </style>
     <div class="txt detail ">
         <div class="carousel slide media-carousel" data-ride="carousel" data-interval="3000" id="media100">
@@ -62,13 +67,12 @@
                     <div class='col-sm-3' style="text-align: center;">
                         <img src="<?php echo BASE_URL.$v['imgpath']?>">
                         <span style="color: white; font-size: 1.1em;white-space: nowrap; text-overflow: ellipsis;"><?php echo $v['title']?></span>
-                        
                     </div>
                     <?php endforeach;?>
                 </div>
                 <?php endforeach;?>
-            <a data-slide="prev" href="#media100" class="left carousel-control" >‹</a>
-            <a data-slide="next" href="#media100" class="right carousel-control" >›</a>
+                <a data-slide="prev" href="#media100" class="left carousel-control"></a>
+            <a data-slide="next" href="#media100" class="right carousel-control" ></a>
         </div>
 <!--        <div>
             <img src="<?php echo BASE_URL?>resource/zhengshu/1.png">
