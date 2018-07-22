@@ -281,15 +281,23 @@
         <div class="index-title-news"></div>
     </div>
     <div class="txt">
+<<<<<<< HEAD
         <div class="list c2 ">
             <div class="listbox"  data-scroll-reveal="enter top  after 0.3s">
+=======
+        <?php foreach($new_list as $newk => $newv):?>
+        <div class="list c2 <?php if($newk%2 !==0){echo 'mg-l-20'; }?>">
+            <div class="listbox">
+>>>>>>> e80098f14cad5ddb4bf0288d119ae5e4a79e0e50
                 <div class="list-news-img">
-                    <img src="<?php echo BASE_URL?>resource/news/thumb/news1.jpg" />
+                    <img src="<?php echo BASE_URL.$newv['imgpath']?>" />
                 </div>
                 <div class="list-news-box">
-                    <a href="<?php echo BASE_URL?>zh/news/detail/?nid=c3685d4d-d1ca-4c7f-b80f-9097e011c010">
-                        <div class="date">2012/4/20</div>
+                    <a href="<?php echo BASE_URL?>zh/news/detail/?id=<?php echo $newv['id']?>">
+                        <!--<div class="date">2012/4/20</div>-->
+                        <div class="title"><?php echo $newv['title']?></div>
                         <div class="line"></div>
+<<<<<<< HEAD
                         <div class="desc">2012 BMW“奥运之悦”盛典 </div>
                         <div class="sk"></div>
                     </a>
@@ -336,11 +344,15 @@
                         <div class="date">2018/04/14</div>
                         <div class="line"></div>
                         <div class="desc">2018年BMW M5上市发布会</div>
+=======
+                        <div class="desc"><?php echo $newv['description']?> </div>
+>>>>>>> e80098f14cad5ddb4bf0288d119ae5e4a79e0e50
                         <div class="sk"></div>
                     </a>
                 </div>
             </div>
         </div>
+       <?php endforeach;?>
 
     </div>
 </div>

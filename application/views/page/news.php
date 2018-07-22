@@ -30,9 +30,6 @@
 </div>
 <div class="mainbox mtop80 mtop20">
     <div class="txt  detail mlist">
-
-
-
                 <!--<a href="http://www.huelead.com/zh/news/detail/?nid=c3685d4d-d1ca-4c7f-b80f-9097e011c010">-->
                     <div class="list c2 ">
                         <div class="list-img">

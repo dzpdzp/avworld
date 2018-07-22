@@ -20,29 +20,36 @@
         $('.imap-right2').find('img').eq(0).attr('src', path1);
     }
 </script>
-
-<footer id="footer">
+<style>
+/*    .footer {
+        background: url(<?php echo BASE_URL?>/images/ft.jpg) left top repeat-x white;
+        min-height: 200px;
+        color: #979b9b;
+    }*/
+</style>
+<footer id="footer" class="footer">
     <div class="mainbox ">
         <div class="copyinfo">
-<!--            <div class="copyinfo-txt">
-                <div class="logo"><img src="<?php echo BASE_URL?>Images/logo2.png" /></div>
-                <div class="copy-code"><label for="">证券代码</label>：835078</div>
-                <div class="copy-txt">Copyright (C) 1997-2017 www.huelead.com, all rights reserved       Beijing Huelead Audiovisual Technology co., Ltd..</div>
-                <div class="copy-txt">
+            <div class="copyinfo-txt">
+<!--                <div class="logo"><img src="<?php echo BASE_URL?>Images/logo2.png" /></div>
+                <div class="copy-code"><label for="">证券代码</label>：835078</div>-->
+                <div class="copy-txt">Copyright (C) 2018 www.avworld.com</div>
+                <!--, all rights reserved       Beijing Huelead Audiovisual Technology co., Ltd..-->
+<!--                <div class="copy-txt">
                     <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011402010099" >
                         <img src="<?php echo BASE_URL?>images/icon_bn.png" style="width: 15px; position: relative; top: 3px;" />京公网安备 11011402010099号</a>
                     &nbsp;&nbsp;
                     <a target="_blank" href="http://www.miibeian.gov.cn/publish/query/indexFirst.action" >京ICP备14027210号-1</a>
-                </div>
-                <div class="copy-txt lang"><a href="<?php echo BASE_URL?>en">English</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php echo BASE_URL?>">中文</a></div>
+                </div>-->
+                <!--<div class="copy-txt lang"><a href="<?php echo BASE_URL?>en">English</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php echo BASE_URL?>">中文</a></div>-->
             </div>
-            <div class="copyinfo-qrcode">
+<!--            <div class="copyinfo-qrcode">
                 <img src="<?php echo BASE_URL?>Images/qrcode.png" />
                 <br />
-                <div><label for="">关注北京国体奥美文化传播有限公司公众号</label></div>
+                <div><label for="">关注公众号</label></div>
             </div>-->
         </div>
-    </div>
+    </div>  
 
 </footer>
 <script>

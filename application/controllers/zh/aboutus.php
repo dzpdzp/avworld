@@ -28,7 +28,6 @@ class Aboutus extends CI_Controller {
         }
         // 需要传递给视图的参数
         $data['certificate_list'] = $rs_certificate_list;
-        
         $this->load->view('common/user_head');
         $this->load->view('page/aboutus',$data);
         $this->load->view('common/user_foot');

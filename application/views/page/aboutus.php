@@ -52,6 +52,11 @@
         .zhengshu img{
             width:10%;
         }
+        .carousel-control.left{
+            background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%); 
+            background-image:  -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, .0001)));
+            background-image: linear-gradient(to right, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
+        }
     </style>
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -73,6 +78,22 @@
                     <?php endforeach;?>
                 </div>
                 <?php endforeach;?>
+<<<<<<< HEAD
+=======
+                <a data-slide="prev" href="#media100" class="left carousel-control"></a>
+            <a data-slide="next" href="#media100" class="right carousel-control" ></a>
+        </div>
+<!--        <div>
+            <img src="<?php echo BASE_URL?>resource/zhengshu/1.png">
+            <img src="<?php echo BASE_URL?>resource/zhengshu/2.png" />
+            <img src="<?php echo BASE_URL?>resource/zhengshu/3.png" />
+            <img src="<?php echo BASE_URL?>resource/zhengshu/4.png" />
+            <img src="<?php echo BASE_URL?>resource/ganxiexin/11.png" />
+            <img src="<?php echo BASE_URL?>resource/ganxiexin/12.png" />
+            <img src="<?php echo BASE_URL?>resource/ganxiexin/13.png" />
+            <img src="<?php echo BASE_URL?>resource/ganxiexin/14.png" />
+            <img src="<?php echo BASE_URL?>resource/ganxiexin/15.png" />
+>>>>>>> e80098f14cad5ddb4bf0288d119ae5e4a79e0e50
         </div>
 
         <!-- Controls -->
