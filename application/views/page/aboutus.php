@@ -53,42 +53,46 @@
             width:10%;
         }
     </style>
-    <div class="txt detail ">
-        <div class="carousel slide media-carousel" data-ride="carousel" data-interval="3000" id="media100">
-            <div class="carousel-inner" style="font-size: 1.2em;">
-                <?php foreach ($certificate_list as $key => $value) :?>
-                <div class='item <?php   if($key == 0){echo 'active';};?> col-sm-12'>
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <?php foreach ($certificate_list as $key => $value) :?>
+                <div class='item <?php   if($key == 0){echo 'active';};?>'>
                     <?php foreach ($value as $k => $v) :?>
                     <div class='col-sm-3' style="text-align: center;">
-                        <img src="<?php echo BASE_URL.$v['imgpath']?>">
+                        <img src="<?php echo BASE_URL.$v['imgpath']?>" width="80" height="250">
                         <span style="color: white; font-size: 1.1em;white-space: nowrap; text-overflow: ellipsis;"><?php echo $v['title']?></span>
-                        
                     </div>
                     <?php endforeach;?>
                 </div>
                 <?php endforeach;?>
-            <a data-slide="prev" href="#media100" class="left carousel-control" >‹</a>
-            <a data-slide="next" href="#media100" class="right carousel-control" >›</a>
         </div>
-<!--        <div>
-            <img src="<?php echo BASE_URL?>resource/zhengshu/1.png">
-            <img src="<?php echo BASE_URL?>resource/zhengshu/2.png" />
-            <img src="<?php echo BASE_URL?>resource/zhengshu/3.png" />
-            <img src="<?php echo BASE_URL?>resource/zhengshu/4.png" />
-            <img src="<?php echo BASE_URL?>resource/ganxiexin/11.png" />
-            <img src="<?php echo BASE_URL?>resource/ganxiexin/12.png" />
-            <img src="<?php echo BASE_URL?>resource/ganxiexin/13.png" />
-            <img src="<?php echo BASE_URL?>resource/ganxiexin/14.png" />
-            <img src="<?php echo BASE_URL?>resource/ganxiexin/15.png" />
-        </div>
-        <div>
-            <img src="<?php echo BASE_URL?>resource/zhengshu/5.png" />
-            <img src="<?php echo BASE_URL?>resource/zhengshu/6.png" />
-            <img src="<?php echo BASE_URL?>resource/zhengshu/7.png" />
-            <img src="<?php echo BASE_URL?>resource/zhengshu/8.png" />
-            <img src="<?php echo BASE_URL?>resource/zhengshu/9.png" />
-            <img src="<?php echo BASE_URL?>resource/zhengshu/10.png" />
-        </div>-->
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    
+    <div class="txt detail ">
+        <div class="carousel slide media-carousel" data-ride="carousel" data-interval="3000" id="media100">
+            <div class="carousel-inner" style="font-size: 1.2em;">
+                
+                <a data-slide="pre  v" href="#media100" class="left carousel-control" >‹</a>
+                <a data-slide="next" href="#media100" class="right carousel-control" >›</a>
+            </div>
     </div>
 </div>
 <!--<div class="mainbox">

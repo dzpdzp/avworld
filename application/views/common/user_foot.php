@@ -1,6 +1,7 @@
 
 <script src="<?php echo USER_RESOURCE_PATH ?>/Scripts/scrollReveal.js"></script>
 <script>
+    console.log(navigator);
     if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
         (function() {
             window.scrollReveal = new scrollReveal({reset: true});

@@ -85,7 +85,6 @@
         font-size: 1.0rem;
         padding-bottom: 20px;
     }
-
     .icon2 {
         width: 30px;
         height: 30px;
@@ -133,13 +132,13 @@
 </div>
 
 <div class="mainbox">
-    <div class="imgtitle">
+    <div class="imgtitle " data-scroll-reveal="enter right after 0.5s">
         <div class="index-title-service"></div>
     </div>
     <div class="txt">
         <div class="list c2" data-scroll-reveal="enter top after 0.1s">
             <a class="link" href="<?php echo BASE_URL?>zh/Service/Index/1">
-                <div class="list-img">
+                <div class="list-img ">
                     <img src="<?php echo BASE_URL?>Images/s1.png" />
                 </div>
                 <div class="list-txtbox">
@@ -161,7 +160,7 @@
                 <div class="list-sk"></div>
             </a>
         </div>
-        <div class="list c2" data-scroll-reveal="enter top after 0.6s">
+<!--        <div class="list c2" data-scroll-reveal="enter top after 0.6s">
             <a class="link" href="<?php echo BASE_URL?>zh/Service/Index/3">
                 <div class="list-img">
                     <img src="<?php echo BASE_URL?>Images/s4.png"  />
@@ -172,7 +171,7 @@
                 </div>
                 <div class="list-sk"></div>
             </a>
-        </div>
+        </div>-->
         <!--        <div class="list c2 mg-l-20 m-mg-l-20" data-scroll-reveal="enter top after 0.8s">
                     <a class="link" href="<?php echo BASE_URL?>zh/Service/Index/4">
                         <div class="list-img">
@@ -278,13 +277,12 @@
 </div>-->
 
 <div class="mainbox">
-    <div class="imgtitle">
-
+    <div class="imgtitle" data-scroll-reveal="enter right after 0.5s">
         <div class="index-title-news"></div>
     </div>
     <div class="txt">
         <div class="list c2 ">
-            <div class="listbox">
+            <div class="listbox"  data-scroll-reveal="enter top  after 0.3s">
                 <div class="list-news-img">
                     <img src="<?php echo BASE_URL?>resource/news/thumb/news1.jpg" />
                 </div>
@@ -299,7 +297,7 @@
             </div>
         </div>
         <div class="list c2 mg-l-20">
-            <div class="listbox">
+            <div class="listbox" data-scroll-reveal="enter bottom  after 0.3s">
                 <div class="list-news-img">
                     <img src="<?php echo BASE_URL?>resource/news/thumb/news2.png" />
                 </div>
@@ -314,7 +312,7 @@
             </div>
         </div>
         <div class="list c2 ">
-            <div class="listbox">
+            <div class="listbox" data-scroll-reveal="enter top after 0.3s">
                 <div class="list-news-img">
                     <img src="<?php echo BASE_URL?>resource/news/thumb/news3.png" />
                 </div>
@@ -329,7 +327,7 @@
             </div>
         </div>
         <div class="list c2 mg-l-20">
-            <div class="listbox">
+            <div class="listbox" data-scroll-reveal="enter bottom after 0.3s">
                 <div class="list-news-img">
                     <img src="<?php echo BASE_URL?>resource/news/thumb/news4.png" />
                 </div>

@@ -104,9 +104,9 @@
               </li>-->
               
               
-              <li>
+<!--              <li>
                 <a href="<?php echo base_url('password/change')?>"><i class="fa fa-expeditedssl fa-fw"></i>变更密码</a>
-              </li>
+              </li>-->
             </ul>
           </div>
         </div>
