@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : localhost
-Source Server Version : 50637
+Source Server         : localhost_mysql5.7_3306
+Source Server Version : 50717
 Source Host           : localhost:3306
 Source Database       : avworld
 
 Target Server Type    : MYSQL
-Target Server Version : 50637
+Target Server Version : 50717
 File Encoding         : 65001
 
-Date: 2018-07-22 23:25:05
+Date: 2018-07-25 22:56:05
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -52,8 +52,30 @@ INSERT INTO `certificate` VALUES ('5', '4', 'resource/zhengshu/4.png');
 INSERT INTO `certificate` VALUES ('6', '5', 'resource/zhengshu/5.png');
 INSERT INTO `certificate` VALUES ('7', '6', 'resource/zhengshu/6.png');
 INSERT INTO `certificate` VALUES ('8', '7', 'resource/zhengshu/7.png');
-INSERT INTO `certificate` VALUES ('9', '8', 'resource/zhengshu/dzp8.jpg');
-INSERT INTO `certificate` VALUES ('10', '9', 'resource/zhengshu/dzp9.jpg');
+INSERT INTO `certificate` VALUES ('9', '8', 'resource/zhengshu/7.png');
+INSERT INTO `certificate` VALUES ('10', '9', 'resource/zhengshu/7.png');
+
+-- ----------------------------
+-- Table structure for news
+-- ----------------------------
+DROP TABLE IF EXISTS `news`;
+CREATE TABLE `news` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `title` varchar(50) DEFAULT NULL,
+  `description` varchar(500) DEFAULT NULL,
+  `imgpath` varchar(100) DEFAULT NULL,
+  `creattime` date DEFAULT NULL COMMENT '插入时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of news
+-- ----------------------------
+INSERT INTO `news` VALUES ('1', '名称', '内容', 'resource/news/news1.jpg', '2018-07-25');
+INSERT INTO `news` VALUES ('2', '1', '2', 'resource/news/news12.jpg', '2018-07-25');
+INSERT INTO `news` VALUES ('3', '1', '2', 'resource/news/news13.jpg', '2018-07-25');
+INSERT INTO `news` VALUES ('4', '3', '44444444444444444444444爱上大声地阿萨德阿萨德阿萨德ad按时啊按时啊啊按时啊AAS啊带我去二多牵我的手多请问 ', 'resource/news/news2.png', '2018-07-25');
+INSERT INTO `news` VALUES ('5', '3', '44444444444444444444444爱上大声地阿萨德阿萨德阿萨德ad按时啊按时啊啊按时啊AAS啊带我去二多牵我的手多请问 ', 'resource/news/news2.png', '2018-07-25');
 
 -- ----------------------------
 -- Table structure for service
@@ -92,9 +114,14 @@ DROP TABLE IF EXISTS `service_type`;
 CREATE TABLE `service_type` (
   `service_type` int(11) NOT NULL,
   `service_name` varchar(255) DEFAULT NULL,
+  `service_img` varchar(255) DEFAULT NULL COMMENT '服务领域 地址',
   PRIMARY KEY (`service_type`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of service_type
 -- ----------------------------
+INSERT INTO `service_type` VALUES ('1', '展会', 'resource/service/service_type/DZP\'S.png');
+INSERT INTO `service_type` VALUES ('2', '展会', 'resource/service/service_type/DZP\'S.png');
+INSERT INTO `service_type` VALUES ('3', '展会', 'resource/service/service_type/DZP\'S.png');
+INSERT INTO `service_type` VALUES ('4', '展会', 'resource/service/service_type/DZP\'S.png');

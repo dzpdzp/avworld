@@ -44,3 +44,18 @@ ul,ul li {
     list-style-type:none;
     overflow:hidden;
 }
+
+.type-title{
+    font-size: 35px;
+    font-family: serif;
+    font-weight: 700;
+}
+.footer-new{
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #3c3c3c;
+    color:white;
+    overflow: hidden;
+    
+}

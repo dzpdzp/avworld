@@ -85,6 +85,9 @@
               <li>
                 <a href="<?php echo base_url('admin/certificate')?>"><i class="fa fa-shopping-cart fa-fw"></i> 证书管理</a>
               </li>
+              <li>
+                <a href="<?php echo base_url('admin/news')?>"><i class="fa fa-shopping-cart fa-fw"></i> 新闻动态</a>
+              </li>
 <!--              <li>
                 <a href="#"><i class="fa fa-line-chart fa-fw"></i> 1级<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">

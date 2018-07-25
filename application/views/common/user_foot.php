@@ -1,7 +1,6 @@
 
 <script src="<?php echo USER_RESOURCE_PATH ?>/Scripts/scrollReveal.js"></script>
 <script>
-    console.log(navigator);
     if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
         (function() {
             window.scrollReveal = new scrollReveal({reset: true});
@@ -27,8 +26,9 @@
         color: #979b9b;
     }*/
 </style>
+    </div>  
 <footer id="footer" class="footer">
-    <div class="mainbox ">
+    <div class="footer-new ">
         <div class="copyinfo">
             <div class="copyinfo-txt">
 <!--                <div class="logo"><img src="<?php echo BASE_URL?>Images/logo2.png" /></div>

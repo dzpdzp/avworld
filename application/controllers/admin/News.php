@@ -37,7 +37,8 @@ class News extends MY_Controller {
                 $insert = array(
                     'title'=> $this->postval('title'),
                     'description'=> $this->postval('description'),
-                    'imgpath' => 'resource/news/'.$data['upload_data']['file_name']
+                    'imgpath' => 'resource/news/'.$data['upload_data']['file_name'],
+                    'creattime'=> date('Y-m-d')
                 );
                  $this->db->insert('news', $insert);
                  header("Location: {$_SERVER['REQUEST_URI']}");

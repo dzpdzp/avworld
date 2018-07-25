@@ -113,7 +113,7 @@
 
 <div class="mainbox">
     <div class="imgtitle">
-        <div class="index-title-about"></div>
+        <div class="type-title">关于我们</div>
     </div>
     <div class="zh-m-enable">
         <p><?php echo $this->lang->line('company_info'); ?></p>
@@ -133,162 +133,34 @@
 
 <div class="mainbox">
     <div class="imgtitle " data-scroll-reveal="enter right after 0.5s">
-        <div class="index-title-service"></div>
+        <div class="type-title">服务领域</div>
     </div>
     <div class="txt">
-        <div class="list c2" data-scroll-reveal="enter top after 0.1s">
+        
+        <?php foreach($service_type_list as $sk => $sv):?>
+        
+        <div class="list c2<?php if($sk%2 !==0){echo ' mg-l-20 m-mg-l-20'; }?>" data-scroll-reveal="enter top after 0.1s">
             <a class="link" href="<?php echo BASE_URL?>zh/Service/Index/1">
                 <div class="list-img ">
-                    <img src="<?php echo BASE_URL?>Images/s1.png" />
+                    <img src="<?php echo BASE_URL.$sv['service_img']?>" width="590px" height="390px" />
                 </div>
                 <div class="list-txtbox">
-                    <div class="title1">Corporate and Industry </div>
-                    <div class="title2 zhdisable">商业会展</div>
+                    <div class="title2 zhdisable"><?php echo $sv['service_name']?></div>
                 </div>
                 <div class="list-sk"></div>
             </a>
         </div>
-        <div class="list c2 mg-l-20 m-mg-l-20" data-scroll-reveal="enter top after 0.3s">
-            <a class="link" href="<?php echo BASE_URL?>zh/Service/Index/2">
-                <div class="list-img">
-                    <img src="<?php echo BASE_URL?>Images/s3.png"   />
-                </div>
-                <div class="list-txtbox">
-                    <div class="title1">Events and Sporting</div>
-                    <div class="title2  zhdisable">文化体育</div>
-                </div>
-                <div class="list-sk"></div>
-            </a>
-        </div>
-<!--        <div class="list c2" data-scroll-reveal="enter top after 0.6s">
-            <a class="link" href="<?php echo BASE_URL?>zh/Service/Index/3">
-                <div class="list-img">
-                    <img src="<?php echo BASE_URL?>Images/s4.png"  />
-                </div>
-                <div class="list-txtbox">
-                    <div class="title1">Theme Exhibition Hall</div>
-                    <div class="title2 zhdisable">主题展厅</div>
-                </div>
-                <div class="list-sk"></div>
-            </a>
-        </div>-->
-        <!--        <div class="list c2 mg-l-20 m-mg-l-20" data-scroll-reveal="enter top after 0.8s">
-                    <a class="link" href="<?php echo BASE_URL?>zh/Service/Index/4">
-                        <div class="list-img">
-                            <img src="<?php echo BASE_URL?>Images/s6.png" />
-                        </div>
-                        <div class="list-txtbox">
-                            <div class="title1">Film Game</div>
-                            <div class="title2 zhdisable">影视游戏</div>
-                        </div>
-                        <div class="list-sk"></div>
-                    </a>
-                </div>-->
-
-
+       <?php endforeach;?>
     </div>
 </div>
-
-<!--<div class="i-technology">
-    <div class="mainbox">
-        <div class="imgtitle">
-            
-            <div class="index-title-product"></div>
-        </div>
-        <div class="txt">
-            <div class="list c3" data-scroll-reveal="enter bottom after 0.1s">
-                <div class="list-img">
-                    <img src="<?php echo BASE_URL?>Images/t3.jpg" />
-                    <div class="pp1">
-                        <a href="<?php echo BASE_URL?>zh/product/index/7 ">
-                            <div class="imgtitle">
-                                <div class="title4">RADIO</div>
-                                <div class="imgtitle-line"></div>
-                            </div>
-                            <div class="txt2 zhdisable">音频</div>
-                            <div class="icon2"></div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="list c3 mg-lr-20 m-mg-l-20" data-scroll-reveal="enter bottom after 0.3s">
-                <div class="list-img">
-                    <img src="<?php echo BASE_URL?>Images/t4.jpg" />
-                    <div class="pp1">
-                        <a href="<?php echo BASE_URL?>zh/product/index/8 ">
-                            <div class="imgtitle">
-                                <div class="title4">VIDEO</div>
-                                <div class="imgtitle-line"></div>
-                            </div>
-                            <div class="txt2 zhdisable">视频</div>
-                            <div class="icon2"></div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="list c3 m-mg-l-p25" data-scroll-reveal="enter bottom after 0.5s">
-                <div class="list-img">
-                    <img src="<?php echo BASE_URL?>Images/t5.jpg" />
-                    <div class="pp1">
-                        <a href="<?php echo BASE_URL?>zh/product/index/9 ">
-                            <div class="imgtitle">
-                                <div class="title4">LIGHT</div>
-                                <div class="imgtitle-line"></div>
-                            </div>
-                            <div class="txt2 zhdisable">灯光</div>
-                            <div class="icon2"></div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="list c2" data-scroll-reveal="enter left after 0.7s">
-                <div class="list-img">
-                    <img src="<?php echo BASE_URL?>Images/t1.png" />
-                    <div class="pp1">
-                        <a href="<?php echo BASE_URL?>zh/product/index/10 ">
-                            <div class="imgtitle">
-                                <div class="title4">ACTIV</div>
-                                <div class="imgtitle-line"></div>
-                            </div>
-                            <div class="txt2 zhdisable">互动</div>
-                            <div class="icon2"></div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="list c2 mg-l-20" data-scroll-reveal="enter right after 0.9s">
-                <div class="list-img">
-                    <img src="<?php echo BASE_URL?>Images/t2.png" />
-                    <div class="pp1">
-                        <a href="<?php echo BASE_URL?>zh/product/index/11 ">
-                            <div class="imgtitle">
-                                <div class="title4">FILM</div>
-                                <div class="imgtitle-line"></div>
-                            </div>
-                            <div class="txt2 zhdisable">影视</div>
-                            <div class="icon2"></div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>-->
-
 <div class="mainbox">
     <div class="imgtitle" data-scroll-reveal="enter right after 0.5s">
-        <div class="index-title-news"></div>
+        <div class="type-title">新闻动态</div>
     </div>
     <div class="txt">
-<<<<<<< HEAD
-        <div class="list c2 ">
-            <div class="listbox"  data-scroll-reveal="enter top  after 0.3s">
-=======
         <?php foreach($new_list as $newk => $newv):?>
         <div class="list c2 <?php if($newk%2 !==0){echo 'mg-l-20'; }?>">
             <div class="listbox">
->>>>>>> e80098f14cad5ddb4bf0288d119ae5e4a79e0e50
                 <div class="list-news-img">
                     <img src="<?php echo BASE_URL.$newv['imgpath']?>" />
                 </div>
@@ -297,63 +169,12 @@
                         <!--<div class="date">2012/4/20</div>-->
                         <div class="title"><?php echo $newv['title']?></div>
                         <div class="line"></div>
-<<<<<<< HEAD
-                        <div class="desc">2012 BMW“奥运之悦”盛典 </div>
-                        <div class="sk"></div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="list c2 mg-l-20">
-            <div class="listbox" data-scroll-reveal="enter bottom  after 0.3s">
-                <div class="list-news-img">
-                    <img src="<?php echo BASE_URL?>resource/news/thumb/news2.png" />
-                </div>
-                <div class="list-news-box">
-                    <a href="<?php echo BASE_URL?>zh/news/detail/?nid=370ac023-e1cd-4f39-a483-70e5bbe258f4">
-                        <div class="date">2016/5/10</div>
-                        <div class="line"></div>
-                        <div class="desc">2016年 雪佛兰品牌之夜</div>
-                        <div class="sk"></div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="list c2 ">
-            <div class="listbox" data-scroll-reveal="enter top after 0.3s">
-                <div class="list-news-img">
-                    <img src="<?php echo BASE_URL?>resource/news/thumb/news3.png" />
-                </div>
-                <div class="list-news-box">
-                    <a href="<?php echo BASE_URL?>zh/news/detail/?nid=9262ea68-a7eb-4a46-b206-b768c2e210ff">
-                        <div class="date">2017/11/11</div>
-                        <div class="line"></div>
-                        <div class="desc">2017天猫双11全球狂欢节 </div>
-                        <div class="sk"></div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="list c2 mg-l-20">
-            <div class="listbox" data-scroll-reveal="enter bottom after 0.3s">
-                <div class="list-news-img">
-                    <img src="<?php echo BASE_URL?>resource/news/thumb/news4.png" />
-                </div>
-                <div class="list-news-box">
-                    <a href="<?php echo BASE_URL?>zh/news/detail/?nid=b5ba263a-67f5-48bc-aed8-ced3bc8a9324">
-                        <div class="date">2018/04/14</div>
-                        <div class="line"></div>
-                        <div class="desc">2018年BMW M5上市发布会</div>
-=======
-                        <div class="desc"><?php echo $newv['description']?> </div>
->>>>>>> e80098f14cad5ddb4bf0288d119ae5e4a79e0e50
                         <div class="sk"></div>
                     </a>
                 </div>
             </div>
         </div>
        <?php endforeach;?>
-
     </div>
 </div>
 <!--<div class="mainbox">

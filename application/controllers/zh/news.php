@@ -13,14 +13,17 @@ class news extends MY_Controller{
         $new_list = $this->img->search_news();
         // 需要传递给视图的参数
         $data['new_list'] = $new_list;
+//        echo "<pre>";
+//        var_dump($data);
+//        exit;
         $this->lang->load('web', 'zh');
         $this->load->view('common/user_head');
         $this->load->view('page/news',$data);
         $this->load->view('common/user_foot');
     }
-    public function detail() {
+    public function detail($id) {
         $where = array(
-            'id' => $_GET['id']
+            'id' => $id
         );
         $this->load->model('Img_model','img');
         // 根据条件分页查询形状信息

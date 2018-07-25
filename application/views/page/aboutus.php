@@ -1,14 +1,9 @@
-
-
-
 <div class="banner banner-about">
     <div class="banner-about-txt"></div>
 </div>
 <div class="mainbox">
     <div class="imgtitle">
-        <div class="imgtitle-title title-about-1">
-            <img src="<?php echo BASE_URL?>Images/zh/about_title_1.png" />
-        </div>
+        <div class="type-title">关于我们</div>
     </div>
     <div class="zh-m-enable">
         <p><?php echo $data['text1']?></p>
@@ -31,9 +26,7 @@
 
 <div class="mainbox">
     <div class="imgtitle">
-        <div class="imgtitle-title title-about-1">
-            业务范围
-        </div>
+        <div class="type-title">业务范围</div>
     </div>
     <div class="txt detail">
         <img src="<?php echo BASE_URL?>resource/businessrange.png" />
@@ -78,22 +71,6 @@
                     <?php endforeach;?>
                 </div>
                 <?php endforeach;?>
-<<<<<<< HEAD
-=======
-                <a data-slide="prev" href="#media100" class="left carousel-control"></a>
-            <a data-slide="next" href="#media100" class="right carousel-control" ></a>
-        </div>
-<!--        <div>
-            <img src="<?php echo BASE_URL?>resource/zhengshu/1.png">
-            <img src="<?php echo BASE_URL?>resource/zhengshu/2.png" />
-            <img src="<?php echo BASE_URL?>resource/zhengshu/3.png" />
-            <img src="<?php echo BASE_URL?>resource/zhengshu/4.png" />
-            <img src="<?php echo BASE_URL?>resource/ganxiexin/11.png" />
-            <img src="<?php echo BASE_URL?>resource/ganxiexin/12.png" />
-            <img src="<?php echo BASE_URL?>resource/ganxiexin/13.png" />
-            <img src="<?php echo BASE_URL?>resource/ganxiexin/14.png" />
-            <img src="<?php echo BASE_URL?>resource/ganxiexin/15.png" />
->>>>>>> e80098f14cad5ddb4bf0288d119ae5e4a79e0e50
         </div>
 
         <!-- Controls -->

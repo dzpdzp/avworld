@@ -9,6 +9,7 @@
     <script src="<?php echo ADMIN_RESOURCE_PATH?>/lib/sbAdmin2/js/sb-admin-2.js"></script>
     <!-- Common JavaScript -->
     <script src="<?php echo ADMIN_RESOURCE_PATH?>/lib/common.js"></script>
+    <script src="<?php echo ADMIN_RESOURCE_PATH?>/lib/js/.js"></script>
     <script>
         /**
          * 数字格式化
