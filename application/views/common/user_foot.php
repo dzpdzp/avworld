@@ -26,6 +26,7 @@
         color: #979b9b;
     }*/
 </style>
+<div id="gotoTop" class="icon-angle-up" style="display: block;"></div>
     </div>  
 <footer id="footer" class="footer">
     <div class="footer-new ">
@@ -82,6 +83,9 @@
         });
 
         e.stopPropagation();
+    });
+    $('#gotoTop').click(function(){
+        
     });
 
 </script>

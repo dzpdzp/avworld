@@ -59,3 +59,30 @@ ul,ul li {
     overflow: hidden;
     
 }
+#gotoTop{
+    display: block;
+    z-index: 299;
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0,0,0,0.3);
+    font-size: 20px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFF;
+    top: auto;
+    left: auto;
+    right: 30px;
+    bottom: 150px;
+    cursor: pointer;
+    border-radius: 2px;
+    
+    transition: background-color .2s linear;
+    -webkit-transition: background-color .2s linear;
+}
+#gotoTop:before{
+    content: "\e7a6";
+}
+#gotoTop:hover{
+    background-color: #F18052;
+}
