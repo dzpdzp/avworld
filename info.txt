@@ -1,0 +1,15 @@
+主机类型
+III型.net
+业务内容
+avworld.cn
+主机管理员账户
+cn1c018
+管理员密码
+g4w4d8t1
+FTP地址
+用户名
+cn1c018
+主机域名
+avworld.cn
+ip地址
+121.198.61.147
