@@ -25,32 +25,72 @@
         min-height: 200px;
         color: #979b9b;
     }*/
+    .container{
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
 </style>
-<div id="gotoTop" class="icon-angle-up" style="display: block;"></div>
+<div id="gotoTop">
+    <span class="glyphicon glyphicon-menu-up"></span>
+</div>
     </div>  
 <footer id="footer" class="footer">
     <div class="footer-new ">
-        <div class="copyinfo">
-            <div class="copyinfo-txt">
-<!--                <div class="logo"><img src="<?php echo BASE_URL?>Images/logo2.png" /></div>
-                <div class="copy-code"><label for="">证券代码</label>：835078</div>-->
-                <div class="copy-txt">Copyright (C) 2018 www.avworld.com</div>
-                <!--, all rights reserved       Beijing Huelead Audiovisual Technology co., Ltd..-->
-<!--                <div class="copy-txt">
-                    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011402010099" >
-                        <img src="<?php echo BASE_URL?>images/icon_bn.png" style="width: 15px; position: relative; top: 3px;" />京公网安备 11011402010099号</a>
-                    &nbsp;&nbsp;
-                    <a target="_blank" href="http://www.miibeian.gov.cn/publish/query/indexFirst.action" >京ICP备14027210号-1</a>
-                </div>-->
-                <!--<div class="copy-txt lang"><a href="<?php echo BASE_URL?>en">English</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php echo BASE_URL?>">中文</a></div>-->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-6 "></div>
+                <div class="col-lg-3 col-6 ">
+                    <h5>合作</h5>
+                    <ul>
+                        <li><a class="footer_a" href="http://www.cnemh.cn/" target="_blank">艺美和</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-6 ">
+                    <h5>关于</h5>
+                    <ul>
+                        <li><a class="footer_a" href="<?php echo BASE_URL.'zh/aboutus'?>" target="_blank">关于我们</a></li>
+                        <li><a class="footer_a" href="#" target="_blank">。。。</a></li>
+                        <li><a class="footer_a" href="#" target="_blank">。。。</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-6 ">
+                    <h5>联系我们</h5>
+                    <ul>
+                        <li><a class="footer_a" href="javascript:void(0)" target="_blank">TEL:12345678901</a></li>
+                        <li><a class="footer_a" href="#" target="_blank">EMAIL:111111@mail.com</a></li>
+                        <li><a class="footer_a" href="#" target="_blank">ADD： 北京市 XXXXXXXXXXXXXXXXXXXXXX</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-1 col-6 "></div>
             </div>
-<!--            <div class="copyinfo-qrcode">
-                <img src="<?php echo BASE_URL?>Images/qrcode.png" />
-                <br />
-                <div><label for="">关注公众号</label></div>
-            </div>-->
-        </div>
-    </div>  
+            <div class="row">
+                <div class="col-lg-2 col-6 "></div>
+                <div class="col-lg-10 col-6 copy-txt">Copyright (C) 2018 www.avworld.com</div>
+            </div>
+            <div class="copyinfo">
+                <div class="copyinfo-txt">
+    <!--                <div class="logo"><img src="<?php echo BASE_URL?>Images/logo2.png" /></div>
+                    <div class="copy-code"><label for="">证券代码</label>：835078</div>-->
+                    <!--, all rights reserved       Beijing Huelead Audiovisual Technology co., Ltd..-->
+    <!--                <div class="copy-txt">
+                        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011402010099" >
+                            <img src="<?php echo BASE_URL?>images/icon_bn.png" style="width: 15px; position: relative; top: 3px;" />京公网安备 11011402010099号</a>
+                        &nbsp;&nbsp;
+                        <a target="_blank" href="http://www.miibeian.gov.cn/publish/query/indexFirst.action" >京ICP备14027210号-1</a>
+                    </div>-->
+                    <!--<div class="copy-txt lang"><a href="<?php echo BASE_URL?>en">English</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php echo BASE_URL?>">中文</a></div>-->
+                </div>
+    <!--            <div class="copyinfo-qrcode">
+                    <img src="<?php echo BASE_URL?>Images/qrcode.png" />
+                    <br />
+                    <div><label for="">关注公众号</label></div>
+                </div>-->
+            </div>
+        </div>  
+    </div>
 
 </footer>
 <script>
@@ -85,7 +125,7 @@
         e.stopPropagation();
     });
     $('#gotoTop').click(function(){
-        
+        $("html,body").animate({scrollTop:0},500);
     });
 
 </script>

@@ -23,9 +23,19 @@
                     <form id="pagination" name="pagination" method="post" action="" enctype="multipart/form-data" >
                         <input type="hidden" name="submit_flag" value="submit_flag">
                         <div class="form-group">
+                            <label class="control-label col-lg-2 col-md-4 col-sm-5">服务领域</label>
+                            <div class="col-lg-10 col-md-8 col-sm-7">
+                            <select class="form-control"  name="service_type" id="service_type" >
+                                <?php foreach ($service_type_list as $k =>$v):?>
+                                <option value="<?php echo $v['service_type']?>"><?php echo $v['service_name']?></option>
+                                <?php endforeach;?>
+                            </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <label class="control-label col-lg-2 col-md-4 col-sm-5">新闻名称</label>
                             <div class="col-lg-10 col-md-8 col-sm-7">
-                                <input class="form-control" placeholder="新闻名称" name="title" required="" type="text">
+                                <input class="form-control" placeholder="新闻名称" name="service_title" required="" type="text">
                             </div>
                         </div>
                         <div class="form-group">
@@ -37,7 +47,10 @@
                         <div class="form-group">
                             <label class="control-label col-lg-2 col-md-4 col-sm-5">上传图片</label>
                             <div class="col-lg-10 col-md-8 col-sm-7">
-                                <input type="file" name="userfile" size="20" />
+                                <input type="file" name="userfile1" />
+                                <input type="file" name="userfile2" />
+                                <input type="file" name="userfile3" />
+                                <input type="file" name="userfile4" />
                             </div>
                         </div>
                         <div class="text-center">

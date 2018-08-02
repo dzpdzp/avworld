@@ -67,7 +67,7 @@ ul,ul li {
     height: 40px;
     background-color: rgba(0,0,0,0.3);
     font-size: 20px;
-    line-height: 36px;
+    line-height: 44px;
     text-align: center;
     color: #FFF;
     top: auto;
@@ -76,13 +76,12 @@ ul,ul li {
     bottom: 150px;
     cursor: pointer;
     border-radius: 2px;
-    
     transition: background-color .2s linear;
     -webkit-transition: background-color .2s linear;
 }
-#gotoTop:before{
-    content: "\e7a6";
-}
 #gotoTop:hover{
     background-color: #F18052;
+}
+.footer_a{
+    color:#ccc;
 }
