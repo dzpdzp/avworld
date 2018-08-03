@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50717
 File Encoding         : 65001
 
-Date: 2018-07-25 22:56:05
+Date: 2018-08-03 18:14:01
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -66,7 +66,7 @@ CREATE TABLE `news` (
   `imgpath` varchar(100) DEFAULT NULL,
   `creattime` date DEFAULT NULL COMMENT '插入时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of news
@@ -76,6 +76,7 @@ INSERT INTO `news` VALUES ('2', '1', '2', 'resource/news/news12.jpg', '2018-07-2
 INSERT INTO `news` VALUES ('3', '1', '2', 'resource/news/news13.jpg', '2018-07-25');
 INSERT INTO `news` VALUES ('4', '3', '44444444444444444444444爱上大声地阿萨德阿萨德阿萨德ad按时啊按时啊啊按时啊AAS啊带我去二多牵我的手多请问 ', 'resource/news/news2.png', '2018-07-25');
 INSERT INTO `news` VALUES ('5', '3', '44444444444444444444444爱上大声地阿萨德阿萨德阿萨德ad按时啊按时啊啊按时啊AAS啊带我去二多牵我的手多请问 ', 'resource/news/news2.png', '2018-07-25');
+INSERT INTO `news` VALUES ('6', '12', '2', 'resource/news/微信图片_20171226131509.png', '2018-07-30');
 
 -- ----------------------------
 -- Table structure for service
@@ -86,12 +87,14 @@ CREATE TABLE `service` (
   `service_type` int(11) DEFAULT NULL COMMENT '服务领域种类  1：商业会展 2 ： 主题  ',
   `service_title` varchar(255) DEFAULT NULL COMMENT '服务名',
   `service_img` varchar(255) DEFAULT NULL COMMENT '服务种类img',
+  `service_des` text COMMENT '服务领域详细信息',
   PRIMARY KEY (`service_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of service
 -- ----------------------------
+INSERT INTO `service` VALUES ('1', '1', '1', 'resource/service/marker.png', '2');
 
 -- ----------------------------
 -- Table structure for service_detail
@@ -121,7 +124,8 @@ CREATE TABLE `service_type` (
 -- ----------------------------
 -- Records of service_type
 -- ----------------------------
-INSERT INTO `service_type` VALUES ('1', '展会', 'resource/service/service_type/DZP\'S.png');
-INSERT INTO `service_type` VALUES ('2', '展会', 'resource/service/service_type/DZP\'S.png');
-INSERT INTO `service_type` VALUES ('3', '展会', 'resource/service/service_type/DZP\'S.png');
-INSERT INTO `service_type` VALUES ('4', '展会', 'resource/service/service_type/DZP\'S.png');
+INSERT INTO `service_type` VALUES ('1', '大型发布会！', 'resource/service/service_type/DZP\'S.png');
+INSERT INTO `service_type` VALUES ('2', '文艺晚会', 'resource/service/service_type/DZP\'S.png');
+INSERT INTO `service_type` VALUES ('3', '开幕庆典', 'resource/service/service_type/DZP\'S.png');
+INSERT INTO `service_type` VALUES ('4', '设备租赁', 'resource/service/service_type/DZP\'S.png');
+INSERT INTO `service_type` VALUES ('5', '其他', 'resource/service/service_type/DZP\'S.png');

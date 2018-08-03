@@ -50,7 +50,7 @@ class Img_model extends CI_Model {
         if(!empty($limit)){
             $this->db->limit($limit);
         }
-        return $this->db->order_by('id desc')               // 按形状编号
+        return $this->db->order_by('id desc')               
                         ->get('news')   // 执行查询
                         ->result_array();                       // 结果集转化为结果数组
     }
@@ -64,6 +64,18 @@ class Img_model extends CI_Model {
         }
         return $this->db->get('service_type')               // 执行查询
                         ->result_array();                   // 结果集转化为结果数组
+    }
+    // 新闻动态设置 查询
+    public function search_service($where = array(),$limit='') {
+        if(!empty($where)){
+            $this->db->where($where);
+        }
+        if(!empty($limit)){
+            $this->db->limit($limit);
+        }
+        return $this->db->order_by('service_id desc')               
+                        ->get('service')   // 执行查询
+                        ->result_array();                       // 结果集转化为结果数组
     }
 
 }

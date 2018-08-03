@@ -47,10 +47,7 @@
                         <div class="form-group">
                             <label class="control-label col-lg-2 col-md-4 col-sm-5">上传图片</label>
                             <div class="col-lg-10 col-md-8 col-sm-7">
-                                <input type="file" name="userfile1" />
-                                <input type="file" name="userfile2" />
-                                <input type="file" name="userfile3" />
-                                <input type="file" name="userfile4" />
+                                <input type="file" name="userfile" />
                             </div>
                         </div>
                         <div class="text-center">
@@ -73,7 +70,7 @@
 
                     <?php
                     // 查询结果不为空
-                    if (count($new_list)) {
+                    if (count($service_list)) {
                         ?>
                         <div class="table-responsive scroll-box" style="clear:both;overflow-x: auto;">
                             <table class="table table-striped table-bordered table-hover">
@@ -86,20 +83,20 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($new_list as $new): ?>
+                                    <?php foreach ($service_list as $service): ?>
                                         <tr>
 
                                             <td class="text-left">
-                                                <?php echo $new['id'] ?>
+                                                <?php echo $service['service_id'] ?>
                                             </td>
                                             <td class="text-left">
-                                                <?php echo $new['title'] ?>
+                                                <?php echo $service['service_title'] ?>
                                             </td>
                                             <td class="text-left">
-                                                <?php echo $new['description'] ?>
+                                                <?php echo $service['service_des'] ?>
                                             </td>
                                             <td class="text-left" style="width:10;height: 10%">
-                                                <img src="<?php echo BASE_URL . $new['imgpath'] ?>" width="100%">
+                                                <img src="<?php echo BASE_URL . $service['service_img'] ?>" width="">
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
