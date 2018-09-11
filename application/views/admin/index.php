@@ -6,7 +6,9 @@
     <div class="container">
       <div class="row">
         <div class="login-panel col-md-4 col-md-offset-4 text-center" style="margin-top:20%;margin-bottom:20px;">
-            <a href="<?php echo BASE_URL?>">AvWorld.com</a>
+            <a href="<?php echo BASE_URL?>">
+                <h1>AvWorld</h1>
+            </a>
         </div>
       </div>
       <div class="row">

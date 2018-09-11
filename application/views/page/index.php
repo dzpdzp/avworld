@@ -162,7 +162,9 @@
         <div class="list c2 <?php if($newk%2 !==0){echo 'mg-l-20'; }?>">
             <div class="listbox">
                 <div class="list-news-img">
-                    <img src="<?php echo BASE_URL.$newv['imgpath']?>" />
+                    <a href="<?php echo BASE_URL?>zh/news/detail/?id=<?php echo $newv['id']?>">
+                        <img src="<?php echo BASE_URL.$newv['imgpath']?>" />
+                    </a>
                 </div>
                 <div class="list-news-box">
                     <a href="<?php echo BASE_URL?>zh/news/detail/?id=<?php echo $newv['id']?>">

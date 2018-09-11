@@ -65,7 +65,15 @@ class Img_model extends CI_Model {
         return $this->db->get('service_type')               // 执行查询
                         ->result_array();                   // 结果集转化为结果数组
     }
-    // 新闻动态设置 查询
+    // 服务领域种类 查询
+    public function search_service_detail($where = array()) {
+        if(!empty($where)){
+            $this->db->where($where);
+        }
+        return $this->db->get('service_type')               // 执行查询
+                        ->result_array();                   // 结果集转化为结果数组
+    }
+    // fuwu  查询
     public function search_service($where = array(),$limit='') {
         if(!empty($where)){
             $this->db->where($where);

@@ -27,7 +27,11 @@ class service extends CI_Controller {
         $this->load->view('common/user_foot');
     }
     public function detail() {
+        $serviceid = $_GET['serviceid'];
+        $this->load->model('Img_model','img');
+        $service_detail = $this->img->search_service(array('service_id'=>$serviceid))[0];
         $data = array(
+            'service_detail' =>$service_detail
         );
         $this->load->library('user_agent');
         $this->lang->load('web', 'zh');

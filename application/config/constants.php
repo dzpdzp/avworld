@@ -85,7 +85,7 @@ defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automat
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
 // 前台资源URL
-define('BASE_URL','http://localhost/avworld/');
+define('BASE_URL','http://avworld.com/');
 // 前台资源URL
 define('USER_RESOURCE_PATH', BASE_URL . 'assets');
 

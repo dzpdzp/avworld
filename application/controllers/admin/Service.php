@@ -25,12 +25,23 @@ class Service extends MY_Controller {
         $data['service_list'] = $service_list;
         $data['service_type_list'] = $service_type;
         if ($this->postval('submit_flag') ) {
+            
+            $config['image_library'] = 'gd2';
+            $config['source_image'] = '/path/to/image/mypic.jpg';
+            $config['create_thumb'] = TRUE;
+            $config['maintain_ratio'] = TRUE;
+            $config['width']     = 75;
+            $config['height']   = 50;
+            $this->load->library('image_lib', $config);
+            $this->image_lib->resize();
+            
             $config['upload_path']      = PROJPATH.'/resource/service/';
             $config['allowed_types']    = 'gif|jpg|png';
             $config['max_size']     = 2048;
-//            $config['max_width']        = 1024;
-//            $config['max_height']       = 768;
+            $config['max_width']        = 1024;
+            $config['max_height']       = 768;
             $this->load->library('upload', $config);
+            
             if ( ! $this->upload->do_upload('userfile')){
                 $data['error']  = $this->upload->display_errors();
             } else {

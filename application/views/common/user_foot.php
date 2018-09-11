@@ -42,13 +42,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-2 col-6 "></div>
-                <div class="col-lg-3 col-6 ">
+                <div class="col-lg-2 col-6 ">
                     <h5>合作</h5>
                     <ul>
                         <li><a class="footer_a" href="http://www.cnemh.cn/" target="_blank">艺美和</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-3 col-6 ">
+                <div class="col-lg-2 col-6 ">
+                    <h5>荣誉</h5>
+                    <ul>
+                        <li><a class="footer_a" href="http://www.cnemh.cn/" target="_blank">感谢</a></li>
+                        <li><a class="footer_a" href="http://www.cnemh.cn/" target="_blank">资质</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6 ">
                     <h5>关于</h5>
                     <ul>
                         <li><a class="footer_a" href="<?php echo BASE_URL.'zh/aboutus'?>" target="_blank">关于我们</a></li>
@@ -56,7 +63,7 @@
                         <li><a class="footer_a" href="#" target="_blank">。。。</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-3 col-6 ">
+                <div class="col-lg-2 col-6 ">
                     <h5>联系我们</h5>
                     <ul>
                         <li><a class="footer_a" href="javascript:void(0)" target="_blank">TEL:12345678901</a></li>
@@ -64,7 +71,7 @@
                         <li><a class="footer_a" href="#" target="_blank">ADD： 北京市 XXXXXXXXXXXXXXXXXXXXXX</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-1 col-6 "></div>
+                <div class="col-lg-2 col-6 "></div>
             </div>
             <div class="row">
                 <div class="col-lg-2 col-6 "></div>
