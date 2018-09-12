@@ -62,7 +62,7 @@
         <div class="list">
             <a  href="<?php echo BASE_URL?>zh/service/detail/?serviceid=<?php echo $v['service_id']?>">
                 <div class="list-img">
-                    <img src="<?php echo BASE_URL.$v['service_img']?>" />
+                    <img src="<?php echo USER_RESOURCE_SERVICE.$v['service_img']?>"width="" />
                 </div>
                 <div class="list-txtbox">
                     <!--<div class="title2"> 庆典典礼</div>-->

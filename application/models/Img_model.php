@@ -81,9 +81,10 @@ class Img_model extends CI_Model {
         if(!empty($limit)){
             $this->db->limit($limit);
         }
-        return $this->db->order_by('service_id desc')               
+        $rs =  $this->db->order_by('service_id desc')               
                         ->get('service')   // 执行查询
                         ->result_array();                       // 结果集转化为结果数组
+                return $rs ;
     }
 
 }

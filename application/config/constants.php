@@ -88,6 +88,8 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 define('BASE_URL','http://avworld.com/');
 // 前台资源URL
 define('USER_RESOURCE_PATH', BASE_URL . 'assets');
+// 前台资源URL
+define('USER_RESOURCE_SERVICE', BASE_URL . 'resource/service/');
 
 // 管理端资源URL
 define('ADMIN_RESOURCE_PATH', BASE_URL . 'assets/admin');

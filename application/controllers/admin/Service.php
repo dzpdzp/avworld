@@ -25,32 +25,36 @@ class Service extends MY_Controller {
         $data['service_list'] = $service_list;
         $data['service_type_list'] = $service_type;
         if ($this->postval('submit_flag') ) {
-            
-            $config['image_library'] = 'gd2';
-            $config['source_image'] = '/path/to/image/mypic.jpg';
-            $config['create_thumb'] = TRUE;
-            $config['maintain_ratio'] = TRUE;
-            $config['width']     = 75;
-            $config['height']   = 50;
-            $this->load->library('image_lib', $config);
-            $this->image_lib->resize();
-            
+            $config = array();
             $config['upload_path']      = PROJPATH.'/resource/service/';
             $config['allowed_types']    = 'gif|jpg|png';
             $config['max_size']     = 2048;
-            $config['max_width']        = 1024;
-            $config['max_height']       = 768;
+//            $config['max_width']        = 1024;
+//            $config['max_height']       = 768;
             $this->load->library('upload', $config);
+            
             
             if ( ! $this->upload->do_upload('userfile')){
                 $data['error']  = $this->upload->display_errors();
             } else {
                 $data['upload_data']  =  $this->upload->data();
+                // 图片 设定大小
+                $config = array();
+                $config['image_library'] = 'gd2';
+                $config['source_image'] = 'resource/service/'.$data['upload_data']['file_name'];
+//                $config['create_thumb'] = TRUE;
+                    $config['new_image'] =  'resource/service/1000_'.$data['upload_data']['file_name'];
+                $config['maintain_ratio'] = TRUE;
+                $config['width']     = 1000;
+                $config['height']   = 500;
+                $this->load->library('image_lib', $config);
+                $this->image_lib->resize();
+                
                 $insert = array(
                     'service_type'=> $this->postval('service_type'),
                     'service_title'=> $this->postval('service_title'),
                     'service_des'=> $this->postval('description'),
-                    'service_img' => 'resource/service/'.$data['upload_data']['file_name'],
+                    'service_img' => $data['upload_data']['file_name'],
                 );
                 $this->db->insert('service', $insert);
                 header("Location: {$_SERVER['REQUEST_URI']}");

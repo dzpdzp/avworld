@@ -96,7 +96,7 @@
                                                 <?php echo $service['service_des'] ?>
                                             </td>
                                             <td class="text-left" style="width:10;height: 10%">
-                                                <img src="<?php echo BASE_URL . $service['service_img'] ?>" width="">
+                                                <img src="<?php echo USER_RESOURCE_SERVICE.$service['service_img'] ?>" width="">
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

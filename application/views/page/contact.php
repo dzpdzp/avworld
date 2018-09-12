@@ -87,10 +87,10 @@
         var lat = '40.002527';
         var point = new BMap.Point(lng, lat);
         map.centerAndZoom(point, 17);
-        map.zoomOut();
-        map.zoomOut();
-        map.zoomOut();
-        map.zoomOut();//缩放比例
+//        map.zoomOut();
+    //        map.zoomOut();
+    //        map.zoomOut();
+//        map.zoomOut();//缩放比例
         var marker = new BMap.Marker(point);  // 创建标注
         map.addOverlay(marker);               // 将标注添加到地图中 
         marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画 

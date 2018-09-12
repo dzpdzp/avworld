@@ -10,9 +10,11 @@
         <div class="detail">
             <br />
             <p><?php echo $service_detail['service_des']?></p>
-            <p><img alt="" src="<?php echo BASE_URL.$service_detail['service_img']?>" /><br />
+            <p>
+                <img alt="" src="<?php echo USER_RESOURCE_SERVICE.$service_detail['service_img']?>" />
             <br />
-            <img alt="" src="<?php echo BASE_URL?>resource/fckupload/images/%e7%ac%ac%e5%85%ab%e5%b1%8a%e4%b8%ad%e5%9b%bd%e4%bc%9a%e8%ae%ae%e4%ba%a7%e4%b8%9a%e5%a4%a7%e4%bc%9a.jpg" /></p>
+                <!--<img alt="" src="<?php echo USER_RESOURCE_SERVICE.$service_detail['service_img']?>" />-->
+            </p>
         </div>
     </div>
 </div>
