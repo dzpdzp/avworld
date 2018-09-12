@@ -78,6 +78,7 @@
                                     <tr>
                                         <th width="10%" class="text-nowrap text-center" style="vertical-align:middle;padding:0 40px;">id</th>
                                         <th width="10%" class="text-nowrap text-center" style="vertical-align:middle;padding:0 40px;">title</th>
+                                        <th width="10%" class="text-nowrap text-center" style="vertical-align:middle;padding:0 40px;">服务领域</th>
                                         <th width="10%" class="text-nowrap text-center" style="vertical-align:middle;padding:0 40px;">详细信息</th>
                                         <th width="10%" class="text-nowrap text-center" style="vertical-align:middle;padding:0 40px;">图片</th>
                                     </tr>
@@ -91,6 +92,13 @@
                                             </td>
                                             <td class="text-left">
                                                 <?php echo $service['service_title'] ?>
+                                            </td>
+                                            <td class="text-left">
+                                                <?php foreach ($service_type_list as $key => $value):?>
+                                                <?php if($service['service_type'] == $value['service_type']):?>
+                                                <?php echo $value['service_name'];?>
+                                                <?php endif; ?>
+                                                <?php endforeach; ?>
                                             </td>
                                             <td class="text-left">
                                                 <?php echo $service['service_des'] ?>
