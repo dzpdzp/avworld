@@ -89,6 +89,8 @@ define('BASE_URL','http://avworld.com/');
 // 前台资源URL
 define('USER_RESOURCE_PATH', BASE_URL . 'assets');
 // 前台资源URL
+define('USER_RESOURCE_NEWS', BASE_URL . 'resource/news/');
+// 前台资源URL
 define('USER_RESOURCE_SERVICE', BASE_URL . 'resource/service/');
 
 // 管理端资源URL

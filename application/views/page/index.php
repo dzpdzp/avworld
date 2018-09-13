@@ -159,11 +159,12 @@
     </div>
     <div class="txt">
         <?php foreach($new_list as $newk => $newv):?>
+        <?php if($newk<6):?>
         <div class="list c2 <?php if($newk%2 !==0){echo 'mg-l-20'; }?>">
             <div class="listbox">
                 <div class="list-news-img">
                     <a href="<?php echo BASE_URL?>zh/news/detail/?id=<?php echo $newv['id']?>">
-                        <img src="<?php echo BASE_URL.$newv['imgpath']?>" />
+                        <img src="<?php echo USER_RESOURCE_NEWS.$newv['imgpath']?>" width="160px" height="95px" />
                     </a>
                 </div>
                 <div class="list-news-box">
@@ -176,6 +177,7 @@
                 </div>
             </div>
         </div>
+        <?php endif;?>
        <?php endforeach;?>
     </div>
 </div>

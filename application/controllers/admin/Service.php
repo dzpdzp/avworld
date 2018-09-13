@@ -28,7 +28,8 @@ class Service extends MY_Controller {
             $config = array();
             $config['upload_path']      = PROJPATH.'/resource/service/';
             $config['allowed_types']    = 'gif|jpg|png';
-            $config['max_size']     = 2048;
+            $config['file_name']    = 'service_'.time();
+            $config['max_size']     = 0;
 //            $config['max_width']        = 1024;
 //            $config['max_height']       = 768;
             $this->load->library('upload', $config);

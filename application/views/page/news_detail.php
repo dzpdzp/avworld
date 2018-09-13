@@ -19,8 +19,14 @@
         <div class="imgtitle-line"></div>
     </div>
     <div class="txt  detail">
-        <img src="<?php echo BASE_URL.$new_list[0]['imgpath']?>" />
-        <br />
-        <p><?php echo $new_list[0]['description']?></p>
+        <div class="panel panel-default">
+            <div class="panel-body">
+              <?php echo $new_list[0]['description']?>
+            </div>
+        </div>
+        <img src="<?php echo USER_RESOURCE_NEWS.$new_list[0]['imgpath']?>" onclick='picBig();' />
     </div>
 </div>
+<script type="text/javascript">    
+
+</script>

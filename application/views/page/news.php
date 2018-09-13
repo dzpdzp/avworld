@@ -30,11 +30,14 @@
 </div>
 <div class="mainbox mtop80 mtop20">
     <div class="txt  detail mlist">
+        <?php if(empty($new_list)):?>
+            <div class="alert alert-warning" role="alert">没有数据</div>
+        <?php  else:?>
         <?php foreach($new_list as $k=>$v):?>
                 <a href="<?php echo BASE_URL.'zh/news/detail/'.$v['id']?>">
                     <div class="list c2 <?php if($k%2 !==0){echo 'mg-l-20'; }?>"  data-scroll-reveal="enter right after 0.5s">
                         <div class="list-img">
-                            <img src="<?php echo BASE_URL.$v['imgpath']?>" />
+                            <img src="<?php echo USER_RESOURCE_NEWS.'480_'.$v['imgpath']?>" width="400px" height="300px" />
                         </div>
                         <div class="list-txt">
                             <span></span>
@@ -45,6 +48,7 @@
                     </div>
                 </a>
         <?php endforeach;?>
+        <?php endif;?>
     </div>
 </div>
 

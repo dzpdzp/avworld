@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-lg-12">
             <ul class="breadcrumb">
-                <li>证书管理</li>
+                <li>服务领域</li>
                 <li>一览</li>
             </ul>
         </div>
@@ -64,7 +64,7 @@
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    证书一览
+                    服务领域一览
                 </div>
                 <div class="panel-body">
 
@@ -104,7 +104,7 @@
                                                 <?php echo $service['service_des'] ?>
                                             </td>
                                             <td class="text-left" style="width:10;height: 10%">
-                                                <img src="<?php echo USER_RESOURCE_SERVICE.$service['service_img'] ?>" width="">
+                                                <img src="<?php echo USER_RESOURCE_SERVICE.$service['service_img'] ?>" width="300px" height="150px">
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

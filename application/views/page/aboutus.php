@@ -1,3 +1,4 @@
+
 <div class="banner banner-about">
     <div class="banner-about-txt"></div>
 </div>
@@ -51,48 +52,21 @@
             background-image: linear-gradient(to right, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
         }
     </style>
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-            <?php foreach ($certificate_list as $key => $value) :?>
-                <div class='item <?php   if($key == 0){echo 'active';};?>'>
-                    <?php foreach ($value as $k => $v) :?>
-                    <div class='col-sm-3' style="text-align: center;">
-                        <img src="<?php echo BASE_URL.$v['imgpath']?>" width="80" height="250">
-                        <span style="color: white; font-size: 1.1em;white-space: nowrap; text-overflow: ellipsis;"><?php echo $v['title']?></span>
-                    </div>
-                    <?php endforeach;?>
-                </div>
-                <?php endforeach;?>
-        </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
     
-    <div class="txt detail ">
-        <div class="carousel slide media-carousel" data-ride="carousel" data-interval="3000" id="media100">
-            <div class="carousel-inner" style="font-size: 1.2em;">
-                
-                <a data-slide="pre  v" href="#media100" class="left carousel-control" >‹</a>
-                <a data-slide="next" href="#media100" class="right carousel-control" >›</a>
-            </div>
-    </div>
-</div>
+    <p>
+            Image gallery (ps, try using mouse scroll wheel)<br />
+
+    </p>    
+    <?php foreach ($certificate_list as $key => $value) :?>
+        <?php foreach ($value as $k => $v) :?>
+            <a rel="example_group" href="<?php echo BASE_URL.$v['imgpath']?>" title="Lorem ipsum dolor sit amet">
+                <img alt="" src="<?php echo BASE_URL.$v['imgpath']?>" class="img-responsive img-rounded" style="width:200px;height:300px;"/>
+            </a>
+            <!--<span style="color: white; font-size: 1.1em;white-space: nowrap; text-overflow: ellipsis;"><?php echo $v['title']?></span>-->
+        <?php endforeach;?>
+    <?php endforeach;?>
+    
+    
 <!--<div class="mainbox">
     <div class="imgtitle">
         <div class="imgtitle-title title-about-1">
@@ -112,6 +86,17 @@
         $('.about-bg-2').find('img').attr('src', p);
     }
 </script>
-<script src="<?php echo ADMIN_RESOURCE_PATH?>/lib/jquery/jquery-2.1.4.min.js"></script>
 <!-- Bootstrap Core JavaScript -->
 <script src="<?php echo ADMIN_RESOURCE_PATH?>/lib/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+                $("a[rel=example_group]").fancybox({
+                        'transitionIn'		: 'none',
+                        'transitionOut'		: 'none',
+                        'titlePosition' 	: 'over',
+                        'titleFormat'		: function(title, currentArray, currentIndex, currentOpts) {
+                                return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+                        }
+                });
+        });
+</script>

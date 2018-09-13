@@ -57,7 +57,10 @@
             <?php endforeach;?>
         </ul>
     </div>
-    <div class="txt  detail" aaa<?php echo $type;?>>
+    <div class="txt  detail" >
+        <?php if(empty($service_list)):?>
+            <div class="alert alert-warning" role="alert">没有数据</div>
+        <?php  else:?>
         <?php foreach ($service_list as $k => $v):?>
         <div class="list">
             <a  href="<?php echo BASE_URL?>zh/service/detail/?serviceid=<?php echo $v['service_id']?>">
@@ -72,6 +75,7 @@
             </a>
         </div>
         <?php endforeach;?>
+        <?php endif;?>
 
     </div>
 </div>

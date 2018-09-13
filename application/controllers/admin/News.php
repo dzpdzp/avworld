@@ -23,7 +23,8 @@ class News extends MY_Controller {
         if ($this->postval('submit_flag') ) {
             $config['upload_path']      = PROJPATH.'/resource/news/';
             $config['allowed_types']    = 'gif|jpg|png';
-            $config['max_size']     = 2048;
+            $config['file_name']    = 'news_'.time();
+            $config['max_size']     = 0;
 //            $config['max_width']        = 1024;
 //            $config['max_height']       = 768;
             $this->load->library('upload', $config);
@@ -34,10 +35,22 @@ class News extends MY_Controller {
             else
             {
                 $data['upload_data']  =  $this->upload->data();
+                 // 图片 设定大小
+                $config = array();
+                $config['image_library'] = 'gd2';
+                $config['source_image'] = 'resource/news/'.$data['upload_data']['file_name'];
+//                $config['create_thumb'] = TRUE;
+                    $config['new_image'] =  'resource/news/480_'.$data['upload_data']['file_name'];
+                $config['maintain_ratio'] = TRUE;
+                $config['width']     = 480;
+                $config['height']   = 300;
+                $this->load->library('image_lib', $config);
+                $this->image_lib->resize();
+                
                 $insert = array(
                     'title'=> $this->postval('title'),
                     'description'=> $this->postval('description'),
-                    'imgpath' => 'resource/news/'.$data['upload_data']['file_name'],
+                    'imgpath' => $data['upload_data']['file_name'],
                     'creattime'=> date('Y-m-d')
                 );
                  $this->db->insert('news', $insert);

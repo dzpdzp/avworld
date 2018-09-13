@@ -9,7 +9,11 @@
     <div class="txt mtop20">
         <div class="detail">
             <br />
-            <p><?php echo $service_detail['service_des']?></p>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                  <?php echo $service_detail['service_des']?>
+                </div>
+            </div>
             <p>
                 <img alt="" src="<?php echo USER_RESOURCE_SERVICE.$service_detail['service_img']?>" />
             <br />

@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-lg-12">
             <ul class="breadcrumb">
-                <li>证书管理</li>
+                <li>新闻动态</li>
                 <li>一览</li>
             </ul>
         </div>
@@ -54,7 +54,7 @@
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    证书一览
+                   新闻动态一览
                 </div>
                 <div class="panel-body">
 
@@ -86,7 +86,7 @@
                                                 <?php echo $new['description'] ?>
                                             </td>
                                             <td class="text-left" style="width:10;height: 10%">
-                                                <img src="<?php echo BASE_URL . $new['imgpath'] ?>" width="100%">
+                                                <img src="<?php echo USER_RESOURCE_NEWS . $new['imgpath'] ?>" width="100%">
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
