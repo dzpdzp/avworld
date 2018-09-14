@@ -29,7 +29,8 @@ class service extends CI_Controller {
     public function detail() {
         $serviceid = $_GET['serviceid'];
         $this->load->model('Img_model','img');
-        $service_detail = $this->img->search_service(array('service_id'=>$serviceid))[0];
+        $service_detail = $this->img->search_service(array('service_id'=>$serviceid));
+        $service_detail = $service_detail[0];
         $data = array(
             'service_detail' =>$service_detail
         );
