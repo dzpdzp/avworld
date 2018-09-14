@@ -66,9 +66,9 @@
                 <div class="col-lg-2 col-6 ">
                     <h5>联系我们</h5>
                     <ul>
-                        <li><a class="footer_a" href="javascript:void(0)" target="_blank">TEL:12345678901</a></li>
-                        <li><a class="footer_a" href="#" target="_blank">EMAIL:111111@mail.com</a></li>
-                        <li><a class="footer_a" href="#" target="_blank">ADD： 北京市 XXXXXXXXXXXXXXXXXXXXXX</a></li>
+                        <li><a class="footer_a" href="javascript:void(0)" target="_blank">TEL:010-84372886</a></li>
+                        <li><a class="footer_a" href="#" target="_blank">EMAIL:av99@163.com</a></li>
+                        <li><a class="footer_a" href="#" target="_blank">ADD： 北京市朝阳区天辰东路9号 国家体育馆152室</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-6 "></div>
