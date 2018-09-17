@@ -13,8 +13,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="alternate" type="application/vnd.wap.xhtml+xml" media="handheld" href="target" />
     <link rel="shortcut icon" href="<?php echo ADMIN_RESOURCE_PATH?>/images/icon.png"  type="image/png">
+    <link rel="stylesheet" href="<?php echo BASE_URL?>/Css/font-icons.css" type="text/css">
     <script src="<?php echo USER_RESOURCE_PATH?>/Scripts/jquery-2.1.4.js"></script>
-    <!--<link href="<?php echo ADMIN_RESOURCE_PATH?>/lib/bootstrap/css/bootstrap.css" rel="stylesheet">   Bootstrap  -->
+    <link href="<?php echo ADMIN_RESOURCE_PATH?>/lib/bootstrap/css/bootstrap.css" rel="stylesheet">   
     <link rel="stylesheet" href="<?php echo USER_RESOURCE_PATH?>/Scripts/bootstrap4.min.css" >
     <script src="<?php echo USER_RESOURCE_PATH?>/Scripts/bootstrap4.min.js" ></script>
     

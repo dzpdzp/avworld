@@ -29,7 +29,7 @@
     <div class="imgtitle">
         <div class="type-title">业务范围</div>
     </div>
-    <div class="txt detail">
+    <div class="txt detail" data-scroll-reveal="enter bottom" data-scroll-reveal-initialized="true">
         <img src="<?php echo BASE_URL?>resource/businessrange.png" />
     </div>
 </div>
@@ -58,7 +58,7 @@
     </p>    
     <?php foreach ($certificate_list as $key => $value) :?>
         <?php foreach ($value as $k => $v) :?>
-            <div style="text-align:center;display: inline-block" >
+            <div style="text-align:center;display: inline-block"  data-scroll-reveal="enter bottom" data-scroll-reveal-initialized="true">
                 <a rel="example_group" href="<?php echo BASE_URL.$v['imgpath']?>" title="<?php echo $v['title']?>">
                     <img alt="" src="<?php echo BASE_URL.$v['imgpath']?>" class="img-responsive img-rounded" style="width:200px;height:300px;"/>
                 </a>
@@ -66,6 +66,21 @@
             </div>
         <?php endforeach;?>
     <?php endforeach;?>
+</div>
+
+<div class="mainbox">
+    <div class="imgtitle">
+        <div class="type-title">我们的团队</div>
+    </div>
+    <div class="txt detail text-center" data-scroll-reveal="enter bottom" data-scroll-reveal-initialized="true">
+        <a data-fancybox="" data-width="640" data-height="360" href="<?php echo BASE_URL.'/resource/team/tuandui.mp4'?>">
+            <video width="640" height="320" controls >
+                <source src="<?php echo BASE_URL.'/resource/team/tuandui.mp4'?>" type="video/mp4">
+            </video>
+        </a>
+
+    </div>
+</div>
     
     
 <!--<div class="mainbox">

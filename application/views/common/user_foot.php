@@ -36,7 +36,14 @@
 <div id="gotoTop">
     <span class="glyphicon glyphicon-menu-up"></span>
 </div>
-    </div>  
+</div>  
+
+<video width="640" height="320" controls id="myVideo" style="display:none;">
+    <source src="https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.mp4" type="video/mp4">
+    <source src="https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.webm" type="video/webm">
+    <source src="https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.ogv" type="video/ogg">
+    Your browser doesn't support HTML5 video tag.
+</video>
 <footer id="footer" class="footer">
     <div class="footer-new ">
         <div class="">
@@ -59,8 +66,8 @@
                     <h5>关于</h5>
                     <ul>
                         <li><a class="footer_a" href="<?php echo BASE_URL.'zh/aboutus'?>" target="_blank">关于我们</a></li>
-<!--                        <li><a class="footer_a" href="#" target="_blank">。。。</a></li>
-                        <li><a class="footer_a" href="#" target="_blank">。。。</a></li>-->
+                        <li><a class="footer_a" data-fancybox href="#myVideo" >我们的团队</a></li>
+                        <!--<li><a class="footer_a" href="#" target="_blank">。。。</a></li>-->
                     </ul>
                 </div>
                 <div class="col-lg-2 col-6 ">

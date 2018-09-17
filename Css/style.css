@@ -79,6 +79,9 @@ ul,ul li {
     transition: background-color .2s linear;
     -webkit-transition: background-color .2s linear;
 }
+#gotoTop:before{
+    /*content: "\e7a6";*/
+}
 #gotoTop:hover{
     background-color: #F18052;
 }

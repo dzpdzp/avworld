@@ -63,7 +63,7 @@
                                             </div>
                                             <div class="form-group">
                                                     <label class="control-label col-lg-2 col-md-3 col-sm-3" style="text-align:right;">新闻内容:</label>
-                                                    <label class="control-label col-lg-2 col-md-3 col-sm-3" style="text-align:left;"><?php echo $news_info['description']?></label>
+                                                    <label class="control-label col-lg-6 col-md-6 col-sm-6" style="text-align:left;"><?php echo $news_info['description']?></label>
                                             </div>
                                             <div class="form-group">
                                                     <label class="control-label col-lg-2 col-md-3 col-sm-3" style="text-align:right;">新闻主图</label>
