@@ -39,7 +39,7 @@
 <div class="mainbox">
     <div class="imgtitle">
         <div class="imgtitle-title title-about-1">
-            获得的证书及感谢信
+            <div class="type-title">证书及感谢信</div>
         </div>
     </div>
     <style>
@@ -54,15 +54,16 @@
     </style>
     
     <p>
-            Image gallery (ps, try using mouse scroll wheel)<br />
-
+            <!--Image gallery (ps, try using mouse scroll wheel)<br />-->
     </p>    
     <?php foreach ($certificate_list as $key => $value) :?>
         <?php foreach ($value as $k => $v) :?>
-            <a rel="example_group" href="<?php echo BASE_URL.$v['imgpath']?>" title="Lorem ipsum dolor sit amet">
-                <img alt="" src="<?php echo BASE_URL.$v['imgpath']?>" class="img-responsive img-rounded" style="width:200px;height:300px;"/>
-            </a>
-            <!--<span style="color: white; font-size: 1.1em;white-space: nowrap; text-overflow: ellipsis;"><?php echo $v['title']?></span>-->
+            <div style="text-align:center;display: inline-block" >
+                <a rel="example_group" href="<?php echo BASE_URL.$v['imgpath']?>" title="<?php echo $v['title']?>">
+                    <img alt="" src="<?php echo BASE_URL.$v['imgpath']?>" class="img-responsive img-rounded" style="width:200px;height:300px;"/>
+                </a>
+                <br><?php echo $v['title']?>
+            </div>
         <?php endforeach;?>
     <?php endforeach;?>
     

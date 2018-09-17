@@ -28,8 +28,10 @@ class news extends MY_Controller{
         $this->load->model('Img_model','img');
         // 根据条件分页查询形状信息
         $new_list = $this->img->search_news($where);
+        $new_img_list = $this->img->get_news_img_by_news_id($id);
         // 需要传递给视图的参数
         $data['new_list'] = $new_list;
+        $data['new_img_list'] = $new_img_list;
         $this->lang->load('web', 'zh');
         $this->load->view('common/user_head');
         $this->load->view('page/news_detail',$data);

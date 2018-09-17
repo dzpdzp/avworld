@@ -24,7 +24,12 @@
               <?php echo $new_list[0]['description']?>
             </div>
         </div>
-        <img src="<?php echo USER_RESOURCE_NEWS.$new_list[0]['imgpath']?>" onclick='picBig();' />
+        <?php foreach ($new_img_list as $key => $value):?>
+        ​<picture>
+            <source srcset="<?php echo USER_RESOURCE_NEWS.$value['imagename']?>" type="image/svg+xml">
+            <img src="<?php echo USER_RESOURCE_NEWS.$value['imagename']?>" class="img-fluid img-thumbnail" alt="">
+        </picture>
+        <?php endforeach;?>
     </div>
 </div>
 <script type="text/javascript">    

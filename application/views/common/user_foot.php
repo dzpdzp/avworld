@@ -39,7 +39,7 @@
     </div>  
 <footer id="footer" class="footer">
     <div class="footer-new ">
-        <div class="container">
+        <div class="">
             <div class="row">
                 <div class="col-lg-2 col-6 "></div>
                 <div class="col-lg-2 col-6 ">
@@ -51,24 +51,24 @@
                 <div class="col-lg-2 col-6 ">
                     <h5>荣誉</h5>
                     <ul>
-                        <li><a class="footer_a" href="http://www.cnemh.cn/" target="_blank">感谢</a></li>
-                        <li><a class="footer_a" href="http://www.cnemh.cn/" target="_blank">资质</a></li>
+                        <li><a class="footer_a" href="<?php echo BASE_URL.'zh/aboutus'?>" target="_blank">感谢</a></li>
+                        <!--<li><a class="footer_a" href="http://www.cnemh.cn/" target="_blank">资质</a></li>-->
                     </ul>
                 </div>
                 <div class="col-lg-2 col-6 ">
                     <h5>关于</h5>
                     <ul>
                         <li><a class="footer_a" href="<?php echo BASE_URL.'zh/aboutus'?>" target="_blank">关于我们</a></li>
-                        <li><a class="footer_a" href="#" target="_blank">。。。</a></li>
-                        <li><a class="footer_a" href="#" target="_blank">。。。</a></li>
+<!--                        <li><a class="footer_a" href="#" target="_blank">。。。</a></li>
+                        <li><a class="footer_a" href="#" target="_blank">。。。</a></li>-->
                     </ul>
                 </div>
                 <div class="col-lg-2 col-6 ">
                     <h5>联系我们</h5>
                     <ul>
-                        <li><a class="footer_a" href="javascript:void(0)" target="_blank">TEL:010-84372886</a></li>
-                        <li><a class="footer_a" href="#" target="_blank">EMAIL:av99@163.com</a></li>
-                        <li><a class="footer_a" href="#" target="_blank">ADD： 北京市朝阳区天辰东路9号 国家体育馆152室</a></li>
+                        <li>TEL:010-84372886</li>
+                        <li>EMAIL:av99@163.com</li>
+                        <li>ADD： 北京市朝阳区天辰东路9号 国家体育馆152室</li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-6 "></div>

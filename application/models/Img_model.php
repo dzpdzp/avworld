@@ -86,5 +86,57 @@ class Img_model extends CI_Model {
                         ->result_array();                       // 结果集转化为结果数组
                 return $rs ;
     }
-
+     // 获取 新闻动态 信息
+    public function get_news_info_by_news_id($news_id){
+        $sql  = "SELECT ";
+        $sql .= "	* ";
+        $sql .= "FROM ";
+        $sql .= "	`news`";
+        $sql .= "WHERE ";
+        $sql .= "	id =  ".$news_id;
+        $rs =$this->db->query($sql)->row_array();
+        return $rs;
+    }
+    
+    // 获取 新闻动态 图片
+    public function get_news_img_by_news_id($news_id){
+        $sql  = "SELECT ";
+        $sql .= "	* ";
+        $sql .= "FROM ";
+        $sql .= "	`news_image`";
+        $sql .= "WHERE ";
+        $sql .= "	news_id =  ".$news_id;
+        $rs =$this->db->query($sql)->result_array();
+        return $rs;
+    }
+    
+    /**
+     * 获取画像数量
+     * @param  [type] $productcd 商品编号
+     * @param  [type] $type      画像类型
+     * @return [type]            画像数量
+     */
+    public function get_image_nums($news_id) {
+        return $this->db->where("imagename LIKE '$news_id%' ")
+                        ->count_all_results('news_image');
+    }
+    
+    /**
+     * 获取最大画像编号
+     * @return [type] 画像编号
+     */
+    public function get_max_imagecd() {
+        $result = $this->db->query("SELECT CASE WHEN MAX(imagecd) IS NULL THEN 0 ELSE MAX(imagecd) END AS maxcd FROM news_image")
+                           ->row_array();
+        return intval($result['maxcd']);
+    }
+    
+    /**
+     * 批量插入商品画像
+     * @param type $image_info
+     */
+    public function insert_news_image_file($image_info) {
+        // 执行插入
+        $this->db->insert_batch('news_image', $image_info, FALSE);
+    }
 }

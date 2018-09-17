@@ -37,7 +37,7 @@
                         <div class="form-group">
                             <label class="control-label col-lg-2 col-md-4 col-sm-5">上传图片</label>
                             <div class="col-lg-10 col-md-8 col-sm-7">
-                                <input type="file" name="userfile" size="20" />
+                                <input type="file" name="userfile" size="20"  />
                             </div>
                         </div>
                         <div class="text-center">
@@ -69,7 +69,8 @@
                                         <th width="10%" class="text-nowrap text-center" style="vertical-align:middle;padding:0 40px;">id</th>
                                         <th width="10%" class="text-nowrap text-center" style="vertical-align:middle;padding:0 40px;">title</th>
                                         <th width="10%" class="text-nowrap text-center" style="vertical-align:middle;padding:0 40px;">详细信息</th>
-                                        <th width="10%" class="text-nowrap text-center" style="vertical-align:middle;padding:0 40px;">图片</th>
+                                        <!--<th width="10%" class="text-nowrap text-center" style="vertical-align:middle;padding:0 40px;">图片</th>-->
+                                        <th width="10%" class="text-nowrap text-center" style="vertical-align:middle;padding:0 40px;">图片管理</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -85,8 +86,11 @@
                                             <td class="text-left">
                                                 <?php echo $new['description'] ?>
                                             </td>
-                                            <td class="text-left" style="width:10;height: 10%">
+<!--                                            <td class="text-left" style="width:10;height: 10%">
                                                 <img src="<?php echo USER_RESOURCE_NEWS . $new['imgpath'] ?>" width="100%">
+                                            </td>-->
+                                            <td class="text-left" style="width:10;height: 10%">
+                                                <a href="javascript:void(0)" type="button" class="btn btn-default goods_portrait" news_id="<?php echo $new['id'] ?>">画像管理11</a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
@@ -151,6 +155,9 @@
         </div>
     </div>
 </div>
+    <form id="news_portrait" method="post" action="<?php echo base_url('/admin/news/goods_portrait')?>">
+        <input type="hidden" name="news_id" value="">
+    </form>
 <!-- 削除のモーダルダイアログ ここまで -->
 </div>
 
@@ -160,6 +167,10 @@
 <!-- Custom JavaScript -->
 <script type="text/javascript">
     $(function() {
+        $("a.goods_portrait").click(function(){
+            $("#news_portrait [name=news_id]").val($(this).attr("news_id"));
+            $("#news_portrait").submit();
+        });
         // 点击新规登录按钮
         $('#add').click(function() {
             $("#panel_display_class").val(get_panel_display_class("searchOption"));

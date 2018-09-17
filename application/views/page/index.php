@@ -153,6 +153,7 @@
        <?php endforeach;?>
     </div>
 </div>
+<?php if(!empty($new_list)):?>
 <div class="mainbox">
     <div class="imgtitle" data-scroll-reveal="enter right after 0.5s">
         <div class="type-title">新闻动态</div>
@@ -181,6 +182,7 @@
        <?php endforeach;?>
     </div>
 </div>
+<?php endif;?>
 <!--<div class="mainbox">
     <div class="imgtitle">
         

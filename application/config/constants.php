@@ -118,3 +118,42 @@ switch (NUMBER_FORMAT_FLAG) {
         define('NUMBER_FORMAT_FUNC', 'floor');
         break;
 }
+
+
+// 商品画像访问URL
+define('PRODUCT_IMAGE_URL', BASE_URL . 'datafile/user/');
+// 商品画像ファイルのMAXサイズ  単位：MB
+define('PRODUCT_IMAGE_FILE_MAX_SIZE', 10);
+define('PRODUCT_IMAGE_FILE_MAX_NUM_PER', 5);
+// 商品毎の画像ファイルの許可されているファイルの種類
+define('PRODUCT_IMAGE_FILE_ALLOWED_TYPE', '.JPG|.JPEG|.GIF|.PNG');
+// CARTファイルの許可されているファイルの種類
+define('CART_FILE_ALLOWED_TYPE', '.TXT|.JPG|.JPEG|.GIF|.PNG|.ZIP|.DOC|.DOCX|.XLS|.XLSX|.XLSM|.PDF|.PPT|.PPTX');
+// 材質ｕｐの許可されているファイルの種類
+define('MATERIAL_FILE_ALLOWED_TYPE', '.TXT|.JPG|.JPEG|.GIF|.PNG|.ZIP|.DOC|.DOCX|.XLS|.XLSX|.XLSM|.PDF');
+// ﾙｼｰﾄファイルの許可されているファイルの種類
+define('MILLSHEET_FILE_ALLOWED_TYPE', '.TXT|.JPG|.JPEG|.GIF|.PNG|.ZIP|.DOC|.DOCX|.XLS|.XLSX|.XLSM|.PPT|.PPTX|.PDF');
+// ﾙｼｰﾄファイルの許可されているファイルの種類
+define('ORTHER_DESCRIPTION_FILE_ALLOWED_TYPE', '.JPG|.JPEG|.GIF|.PNG|.ZIP|.DOC|.DOCX|.XLS|.XLSX|.XLSM|.PPT|.PPTX|.PDF');
+// 临时文件目录
+define('TEMPORARY_DIR', PROJPATH . 'datafile/temp/');
+// 商品登録履歴
+define('FILE_BELONG_NONE', 0);
+// 商品画像ファイル
+define('FILE_BELONG_PRODUCT_IMAGE', 1);
+// お知らせファイル
+define('FILE_BELONG_MESSAGE', 2);
+// 材質ファイル
+define('FILE_BELONG_MATERIAL', 3);
+// ﾙｼｰﾄファイル
+define('FILE_BELONG_MILLSHEET', 4);
+// お問い合わせファイル
+define('FILE_BELONG_ORDER_MESSAGE', 5);
+// その他説明ファイル
+define('FILE_BELONG_ORTHER_DESCRIPTION', 6);
+// 商品画像ｕｐサーバーROOT DIR
+define('PRODUCT_IMAGE_FILE_UPLOAD_DIR', PROJPATH . 'datafile/user/');
+// 商品画像缩略图 宽
+define('PRODUCT_IMG_THUMB_WIDTH', 330);
+// 商品画像缩略图 高
+define('PRODUCT_IMG_THUMB_HEIGHT', 470);
