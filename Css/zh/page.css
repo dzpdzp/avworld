@@ -1047,3 +1047,6 @@
 .height350{
     height: 350px;
 }
+a{
+    text-decoration: none!important;
+}
