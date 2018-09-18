@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-lg-12">
             <ul class="breadcrumb">
-                <li>新闻动态</li>
+                <li>我们的团队</li>
                 <li>一览</li>
             </ul>
         </div>
@@ -17,33 +17,16 @@
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <?php if (!empty($error)): ?>
-                        <div class="form-group alert alert-danger" role="alert" style="margin: 0 0 20px 0;"><?php echo $error; ?></div>
-                    <?php endif; ?>
+                    <div class="alert alert-warning" role="alert">说明： 视频以最后一次上传 才会在页面上反映</div>
+                    <?php if(!empty($error)):?>
+                    <div class="form-group alert alert-danger" role="alert" style="margin: 0 0 20px 0;"><?php echo $error;?></div>
+                    <?php endif;?>
                     <form id="pagination" name="pagination" method="post" action="" enctype="multipart/form-data" >
                         <input type="hidden" name="submit_flag" value="submit_flag">
                         <div class="form-group">
-                            <label class="control-label col-lg-2 col-md-4 col-sm-5">新闻名称</label>
-                            <div class="col-lg-10 col-md-8 col-sm-7">
-                                <input class="form-control" placeholder="新闻名称" name="title" required="" type="text">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-lg-2 col-md-4 col-sm-5">新闻内容</label>
-                            <div class="col-lg-10 col-md-8 col-sm-7">
-                                <textarea class="form-control" placeholder="新闻内容" name="description" required="" type="text"></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-lg-2 col-md-4 col-sm-5">上传主图</label>
-                            <div class="col-lg-10 col-md-8 col-sm-7">
-                                <input type="file" name="userfile" size="20"  />
-                            </div>
-                        </div>
-                        <div class="form-group">
                             <label class="control-label col-lg-2 col-md-4 col-sm-5">上传视频</label>
                             <div class="col-lg-10 col-md-8 col-sm-7">
-                                <input type="file" name="video" />
+                                <input type="file" name="userfile" size="20" />
                             </div>
                         </div>
                         <div class="text-center">
@@ -60,46 +43,31 @@
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                   新闻动态一览
+                    我们的团队
                 </div>
                 <div class="panel-body">
 
                     <?php
                     // 查询结果不为空
-                    if (count($new_list)) {
+                    if (count($ourteam_list)) {
                         ?>
                         <div class="table-responsive scroll-box" style="clear:both;overflow-x: auto;">
                             <table class="table table-striped table-bordered table-hover">
                                 <thead>
                                     <tr>
-                                        <th width="10%" class="text-nowrap text-center" style="vertical-align:middle;padding:0 40px;">id</th>
-                                        <th width="10%" class="text-nowrap text-center" style="vertical-align:middle;padding:0 40px;">title</th>
-                                        <th width="10%" class="text-nowrap text-center" style="vertical-align:middle;padding:0 40px;">详细信息</th>
-                                        <!--<th width="10%" class="text-nowrap text-center" style="vertical-align:middle;padding:0 40px;">图片</th>-->
-                                        <th width="10%" class="text-nowrap text-center" style="vertical-align:middle;padding:0 40px;">图片管理</th>
+                                        <th width="10%" class="text-nowrap text-center" style="vertical-align:middle;padding:0 40px;">当前证书有</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($new_list as $new): ?>
-                                        <tr>
-
-                                            <td class="text-left">
-                                                <?php echo $new['id'] ?>
-                                            </td>
-                                            <td class="text-left">
-                                                <?php echo $new['title'] ?>
-                                            </td>
-                                            <td class="text-left">
-                                                <?php echo $new['description'] ?>
-                                            </td>
-<!--                                            <td class="text-left" style="width:10;height: 10%">
-                                                <img src="<?php echo USER_RESOURCE_NEWS . $new['imgpath'] ?>" width="100%">
-                                            </td>-->
-                                            <td class="text-left" style="width:10;height: 10%">
-                                                <a href="javascript:void(0)" type="button" class="btn btn-default goods_portrait" news_id="<?php echo $new['id'] ?>">画像管理11</a>
-                                            </td>
-                                        </tr>
-                                    <?php endforeach; ?>
+                                    <tr>
+                                        <td class="text-left">
+                                            <a data-fancybox="" data-width="640" data-height="360" href="<?php echo USER_RESOURCE_OURSTEAM.$ourteam_list['videoname']?>">
+                                                <video width="640" height="320" controls >
+                                                    <source src="<?php echo USER_RESOURCE_OURSTEAM.$ourteam_list['videoname']?>" type="video/mp4">
+                                                </video>
+                                            </a>
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -108,7 +76,7 @@
                     // 查询结果为空
                     else {
                         // 输出提示信息 
-                        echo '还没有添加新闻动态';
+                        echo '还没有添加介绍视频';
                     }
                     ?>
 
@@ -161,9 +129,6 @@
         </div>
     </div>
 </div>
-    <form id="news_portrait" method="post" action="<?php echo base_url('/admin/news/goods_portrait')?>">
-        <input type="hidden" name="news_id" value="">
-    </form>
 <!-- 削除のモーダルダイアログ ここまで -->
 </div>
 
@@ -173,10 +138,6 @@
 <!-- Custom JavaScript -->
 <script type="text/javascript">
     $(function() {
-        $("a.goods_portrait").click(function(){
-            $("#news_portrait [name=news_id]").val($(this).attr("news_id"));
-            $("#news_portrait").submit();
-        });
         // 点击新规登录按钮
         $('#add').click(function() {
             $("#panel_display_class").val(get_panel_display_class("searchOption"));

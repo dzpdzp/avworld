@@ -88,10 +88,13 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 define('BASE_URL','http://avworld.com/');
 // 前台资源URL
 define('USER_RESOURCE_PATH', BASE_URL . 'assets');
-// 前台资源URL
+// 新闻动态
 define('USER_RESOURCE_NEWS', BASE_URL . 'resource/news/');
-// 前台资源URL
+// 服务领域
 define('USER_RESOURCE_SERVICE', BASE_URL . 'resource/service/');
+// 我们的团队
+define('USER_RESOURCE_OURSTEAM', BASE_URL . 'resource/oursteam/');
+
 
 // 管理端资源URL
 define('ADMIN_RESOURCE_PATH', BASE_URL . 'assets/admin');

@@ -21,7 +21,8 @@ class news extends MY_Controller{
         $this->load->view('page/news',$data);
         $this->load->view('common/user_foot');
     }
-    public function detail($id) {
+    public function detail($id = '') {
+        $id = empty($id)?$this->getval('id'):$id;
         $where = array(
             'id' => $id
         );

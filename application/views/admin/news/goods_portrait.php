@@ -74,6 +74,20 @@
                                                         </figure>
                                                     </label>
                                             </div>
+                                            <div class="form-group">
+                                                    <label class="control-label col-lg-2 col-md-3 col-sm-3" style="text-align:right;">新闻视频</label>
+                                                    <label class="control-label col-lg-2 col-md-3 col-sm-3" style="text-align:left;">
+                                                        <?php if(!empty($news_info['videopath'])):?>
+                                                        <figure class="figure">
+                                                            <video width="640" height="320" controls >
+                                                                <source src="<?php echo USER_RESOURCE_NEWS.$news_info['videopath']?>" type="video/mp4">
+                                                            </video>
+                                                        </figure>
+                                                        <?php else:?>
+                                                        无
+                                                        <?php endif;?>
+                                                    </label>
+                                            </div>
                                     </div>
                                 </div>
                             </div>
@@ -86,13 +100,23 @@
                                     <div class="table-responsive scroll-box" style="clear:both;overflow-x: auto;">
                                     <table class="table table-striped table-bordered table-hover" style="border: none;">
                                         <tr style="line-height:10px;text-align:center;" class="table_format_control">
-                                            <td width="100px" >
+                                            <td width="5%">
                                             </td>
                                             <td width="100px" >
                                             </td>
-                                            <td width="100px" >
+                                            <td width="5%">
                                             </td>
                                             <td width="100px" >
+                                            </td>
+                                            <td width="5%">
+                                            </td>
+                                            <td width="100px" >
+                                            </td>
+                                            <td width="5%">
+                                            </td>
+                                            <td width="100px" >
+                                            </td>
+                                            <td width="5%">
                                             </td>
                                             <td width="100px" >
                                             </td>
@@ -101,6 +125,14 @@
                                             <?php     if ($key % 5 === 0): ?>
                                                 <tr style="line-height:10px;text-align:center;">
                                             <?php     endif; ?>
+                                                    <td  width="5%">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" name="checkflg" value="<?php echo $images['imagecd']?>" onclick="img_check()"/>
+                                                                <span class="cr"><i class="cr-icon glyphicon glyphicon-ok-sign c-i"></i></span>
+                                                            </label>
+                                                        </div>
+                                                    </td>
                                                     <td width="100px" >
                                                         <a href="<?php echo USER_RESOURCE_NEWS.$images['imagename']?>" target="_blank">
                                                             <img src="<?php echo USER_RESOURCE_NEWS.$images['imagename']?>" width="100px" />
@@ -176,7 +208,7 @@
                     <p class="recipient">确定删除图片吗</p>
                 </div>
                 <div class="modal-footer">
-                    <form role="form" id="delForm" method="post" action="<?php echo base_url('supplier/product/photo/del_portrait') ;?>">
+                    <form role="form" id="delForm" method="post" action="<?php echo base_url('admin/news/del_portrait') ;?>">
                           <input type="hidden" name="news_id" value="<?php echo $news_info['id']?>">
                           <input type="submit" class="btn btn-default" value="确认">
                           <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>

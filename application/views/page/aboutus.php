@@ -73,12 +73,11 @@
         <div class="type-title">我们的团队</div>
     </div>
     <div class="txt detail text-center" data-scroll-reveal="enter bottom" data-scroll-reveal-initialized="true">
-        <a data-fancybox="" data-width="640" data-height="360" href="<?php echo BASE_URL.'/resource/team/tuandui.mp4'?>">
+        <a data-fancybox="" data-width="640" data-height="360" href="<?php echo USER_RESOURCE_OURSTEAM.$ourteam_list['videoname']?>">
             <video width="640" height="320" controls >
-                <source src="<?php echo BASE_URL.'/resource/team/tuandui.mp4'?>" type="video/mp4">
+                <source src="<?php echo USER_RESOURCE_OURSTEAM.$ourteam_list['videoname']?>" type="video/mp4">
             </video>
         </a>
-
     </div>
 </div>
     

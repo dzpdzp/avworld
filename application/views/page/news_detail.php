@@ -24,10 +24,20 @@
               <?php echo $new_list[0]['description']?>
             </div>
         </div>
+        <?php if(!empty($new_list[0]['videopath'])):?>
+        <div class="txt detail text-center" data-scroll-reveal="enter bottom" data-scroll-reveal-initialized="true">
+            <a data-fancybox="" data-width="640" data-height="360" href="<?php echo USER_RESOURCE_NEWS.$new_list[0]['videopath']?>">
+                <video width="640" height="320" controls >
+                    <source src="<?php echo USER_RESOURCE_NEWS.$new_list[0]['videopath']?>" type="video/mp4">
+                </video>
+            </a>
+        </div>
+        <?php endif;?>
         <?php foreach ($new_img_list as $key => $value):?>
         ​<picture>
-            <source srcset="<?php echo USER_RESOURCE_NEWS.$value['imagename']?>" type="image/svg+xml">
-            <img src="<?php echo USER_RESOURCE_NEWS.$value['imagename']?>" class="img-fluid img-thumbnail" alt="">
+            <?php $img_name = explode('.', $value['imagename']);$img_big = $img_name[0].'_big.'; $img_big_suffix=$img_name[1] ?>
+            <source srcset="<?php echo USER_RESOURCE_NEWS.$img_big.$img_big_suffix?>" type="image/svg+xml">
+            <img src="<?php echo USER_RESOURCE_NEWS.$img_big.$img_big_suffix?>" class="img-fluid img-thumbnail" alt="">
         </picture>
         <?php endforeach;?>
     </div>

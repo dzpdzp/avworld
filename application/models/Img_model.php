@@ -139,4 +139,20 @@ class Img_model extends CI_Model {
         // 执行插入
         $this->db->insert_batch('news_image', $image_info, FALSE);
     }
+    
+    /**
+     * 删除商品画像
+     * @param  [type] $where 删除条件
+     */
+    public function delete_images($where) {
+        $this->db->where("news_id = '{$where['news_id']}' AND imagecd IN ({$where['imagecds']})")
+                 ->delete('news_image');
+    }
+    
+    // 我们的团队
+    public function search_ourteam() {
+        return $this->db->order_by('id desc')    
+                        ->get('ours_team')   // 执行查询
+                        ->row_array();                       // 结果集转化为结果数组
+    }
 }

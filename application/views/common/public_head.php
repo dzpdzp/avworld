@@ -13,10 +13,8 @@
 <link href="<?php echo ADMIN_RESOURCE_PATH?>/lib/metisMenu/metisMenu.min.css" rel="stylesheet">
 <!-- SB Admin 2 CSS -->
 <link href="<?php echo ADMIN_RESOURCE_PATH?>/lib/sbAdmin2/css/sb-admin-2.css" rel="stylesheet">
-<?php if (isset($css['checkboxstyle'])) :?>
 <!-- checkboxstyle -->
 <link href="<?php echo ADMIN_RESOURCE_PATH?>/lib/css/checkboxstyle.css"rel="stylesheet">
-<?php endif;?>
 <?php if (isset($css['combobox'])) :?>
 <!-- jquery.ajax-combobox style -->
 <link href="<?php echo ADMIN_RESOURCE_PATH?>/lib/combobox/jquery.ajax-combobox.css"rel="stylesheet">

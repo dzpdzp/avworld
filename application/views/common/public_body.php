@@ -91,6 +91,9 @@
               <li>
                 <a href="<?php echo base_url('admin/service')?>"><i class="fa fa-shopping-cart fa-fw"></i>服务领域</a>
               </li>
+              <li>
+                <a href="<?php echo base_url('admin/ours_team')?>"><i class="fa fa-shopping-cart fa-fw"></i>我们的团队</a>
+              </li>
 <!--              <li>
                 <a href="#"><i class="fa fa-line-chart fa-fw"></i> 1级<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
