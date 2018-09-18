@@ -72,6 +72,7 @@
     <div class="imgtitle">
         <div class="type-title">我们的团队</div>
     </div>
+    <?php if(!empty($ourteam_list['videoname'])):?>
     <div class="txt detail text-center" data-scroll-reveal="enter bottom" data-scroll-reveal-initialized="true">
         <a data-fancybox="" data-width="640" data-height="360" href="<?php echo USER_RESOURCE_OURSTEAM.$ourteam_list['videoname']?>">
             <video width="640" height="320" controls >
@@ -79,6 +80,9 @@
             </video>
         </a>
     </div>
+    <?php else :?>
+            <div class="alert alert-warning" role="alert">没有数据</div>
+    <?php endif;?>
 </div>
     
     
