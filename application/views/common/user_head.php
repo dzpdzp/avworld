@@ -23,10 +23,10 @@
     <script src="<?php echo USER_RESOURCE_PATH?>/Scripts/fancybox-master/dist/jquery.fancybox.min.js"></script>
     <link href="<?php echo BASE_URL?>/Css/style.css" rel="stylesheet" />
     <style>
-    #header {
+/*    #header {
         background: none;
         background-color: rgba(240,144,24,.9);
-    }
+    }*/
     </style>
     <script>
         var dynamicLoading = {
